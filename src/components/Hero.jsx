@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
+import heroImg from '../assets/images/heroimg.webp'
 
 export default function Hero() {
   const img = useRef(null);
@@ -21,7 +22,7 @@ export default function Hero() {
         <img
           ref={img}
           className="  rounded-md opacity-50 "
-          src="src/assets/images/heroimg.webp"
+          src={heroImg}
           alt="Abstract cubic background image"
         />
       </div>
