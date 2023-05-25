@@ -18,22 +18,22 @@ export default function Hero() {
       img.current,
       { scale: 2, duration: 3.2, ease: "power4.inOut" },
       "-=3.1"
-    ).from(title.current, {y: -96, duration: 2, ease: "power4.inOut"})
+    ).to(title.current, {y: 0, duration: 2, ease: "power4.inOut"})
   });
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
       <div className="z-10 flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
         <div className="title">
-          <h1>Hey, I&apos;m Huy</h1>
+          <h1 ref={title} className="translate-y-36">Hey, I&apos;m Huy</h1>
         </div>
         <div className="title">
-          <h1 className="title font-outline-4 text-transparent">
+          <h1 ref={title} className="title font-outline-4 translate-y-36 text-transparent">
             Hey, I&apos;m Huy
           </h1>
         </div>
         <div className="title">
-          <h1>Hey, I&apos;m Huy</h1>
+          <h1 ref={title} className="translate-y-36">Hey, I&apos;m Huy</h1>
         </div>
       </div>
       <div
