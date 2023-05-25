@@ -23,7 +23,7 @@ export default function Hero() {
           ref={img}
           className="  rounded-md opacity-50 "
           src={heroImg}
-          alt="Abstract cubic background image"
+          alt="Abstract cubic background image."
         />
       </div>
     </div>
