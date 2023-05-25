@@ -25,8 +25,8 @@ export default function Hero() {
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
       {/* Make leading also fluid along with the fluid typography */}
-      <div className="z-10 flex flex-col text-title font-semibold uppercase leading-tight md:leading-[1.1em] text-accent-300 px-3 h-fit">
-        <div className="title border border-black h-fit min-w-full">
+      <div className="z-10 flex flex-col text-title font-semibold uppercase leading-tight  md:leading-[1.1em] text-accent-300 px-3 h-fit">
+        <div className="title h-fit min-w-full">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
             Hey, I&apos;m Huy
