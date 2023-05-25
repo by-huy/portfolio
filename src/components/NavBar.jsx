@@ -1,14 +1,19 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 export default function NavBar() {
-  const navBar = useRef(null)
-  const tl = gsap.timeline()
+  const navBar = useRef(null);
+  const tl = gsap.timeline();
 
-  tl.to(navBar.current, {y:0, duration: 2})
+  useEffect(() => {
+    tl.to(navBar.current, { y: 0, duration: 2, delay: 5});
+  }, []);
 
   return (
-    <header ref={navBar} className=" -translate-y-full flex justify-between items-center px-5 py-3 fixed z-50 mix-blend-multiply w-full">
+    <header
+      ref={navBar}
+      className=" fixed z-50 flex w-full -translate-y-full items-center justify-between px-5 py-3 mix-blend-multiply"
+    >
       <a href="/">
         <svg
           width="80"
@@ -33,7 +38,12 @@ export default function NavBar() {
         <a href="#about">about</a>
         <a href="#services">services</a>
         <a href="#works">works</a>
-        <a className="bg-accent-300 px-8 py-3 rounded-full text-secondary-200" href="#contact">let&apos;s talk.</a>
+        <a
+          className="rounded-full bg-accent-300 px-8 py-3 text-secondary-200"
+          href="#contact"
+        >
+          let&apos;s talk.
+        </a>
       </nav>
     </header>
   );
