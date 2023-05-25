@@ -26,6 +26,7 @@ export default function Hero() {
     <div className="relative flex h-screen select-none items-center justify-center">
       <div className="z-10 flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
         <div className="title">
+          {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
             Hey, I&apos;m Huy
           </h1>

@@ -1,6 +1,14 @@
+import { useRef } from "react";
+import { gsap } from "gsap";
+
 export default function NavBar() {
+  const navBar = useRef(null)
+  const tl = gsap.timeline()
+
+  tl.to(navBar.current, {y:0, duration: 2})
+
   return (
-    <header className=" flex justify-between items-center px-5 py-3 fixed z-50 mix-blend-multiply w-full">
+    <header ref={navBar} className=" -translate-y-full flex justify-between items-center px-5 py-3 fixed z-50 mix-blend-multiply w-full">
       <a href="/">
         <svg
           width="80"
