@@ -10,8 +10,8 @@ export default function Hero() {
     const tl = gsap.timeline();
     
     tl
-    .from(imgContainer.current, {scale: 1.4, duration:2, ease:"power4.out"})
-    .from(img.current, { scale: 2, duration: 1.25}, '-=1.5')
+    .from(imgContainer.current, {scale: 1.4, duration:2.25, ease:"power4.out"})
+    .from(img.current, { scale: 2, duration: 1.25}, '-=1.95')
     .to(img.current, { scale: 1, ease:"power4.out" });
   });
 
