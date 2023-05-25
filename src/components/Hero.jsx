@@ -24,6 +24,7 @@ export default function Hero() {
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
+      {/* Make leading also fluid along with the fluid typography */}
       <div className="z-10 flex flex-col text-title font-semibold uppercase leading-tight md:leading-[1.1em] text-accent-300 px-3 h-fit">
         <div className="title border border-black h-fit min-w-full">
           {/* Learn more about useRef */}
@@ -47,7 +48,7 @@ export default function Hero() {
       </div>
       <div
         ref={imgContainer}
-        className="absolute mx-auto aspect-square md:aspect-auto w-1/2 overflow-hidden rounded-md"
+        className="absolute mx-auto  md:aspect-auto w-1/2 overflow-hidden rounded-md"
       >
         <img
           ref={img}
