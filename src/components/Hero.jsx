@@ -18,7 +18,7 @@ export default function Hero() {
       img.current,
       { scale: 2, duration: 3.2, ease: "power4.inOut" },
       "-=3.1"
-    ).to(titles.current, {y: 0, duration: 2, ease: "power4.inOut"}, "-=2")
+    ).to(titles.current, {y: 0, duration: 2, ease: "power4.inOut"}, "-=2.5")
 
   }, []);
 
