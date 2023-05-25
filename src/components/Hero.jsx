@@ -1,15 +1,14 @@
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
-import heroImg from '../assets/images/heroimg.webp'
+import heroImg from "../assets/images/heroimg.webp";
 
 export default function Hero() {
   const img = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline();
-    tl;
+    tl.from(img.current, { scale: 1.5 }).to(img.current, { scale: 1, ease:'linear' });
   });
-
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
@@ -21,7 +20,7 @@ export default function Hero() {
       <div className="absolute mx-auto w-1/2 rounded-md">
         <img
           ref={img}
-          className="  rounded-md opacity-50 "
+          className="rounded-md opacity-50"
           src={heroImg}
           alt="Abstract cubic background image."
         />
