@@ -6,7 +6,7 @@ export default function NavBar() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    tl.to(navBar.current, { y: 0, duration: 3, delay: 2, ease: "expo.inOut"});
+    tl.to(navBar.current, { y: 0, duration: 3, delay: 2, ease: "power4.inOut"});
   }, []);
 
   return (
