@@ -6,6 +6,7 @@ export default function Hero() {
   const img = useRef(null);
   const imgContainer = useRef(null);
   const title = useRef(null)
+  let allTitles = gsap.utils.selector(title)
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -18,7 +19,7 @@ export default function Hero() {
       img.current,
       { scale: 2, duration: 3.2, ease: "power4.inOut" },
       "-=3.1"
-    ).to(title.current, {y: 0, duration: 2, ease: "power4.inOut"})
+    ).to(allTitles.current, {y: 0, duration: 2, ease: "power4.inOut"})
   });
 
   return (
