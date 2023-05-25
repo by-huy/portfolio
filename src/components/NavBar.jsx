@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <header className="flex justify-between items-center px-5 py-2 fixed z-50 mix-blend-multiply w-full">
+    <header className=" flex justify-between items-center px-5 py-2 fixed z-50 mix-blend-multiply w-full">
       <a href="/">
         <svg
           width="80"
