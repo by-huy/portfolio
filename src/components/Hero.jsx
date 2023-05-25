@@ -4,27 +4,45 @@ import heroImg from "../assets/images/heroimg.webp";
 
 export default function Hero() {
   const img = useRef(null);
-  const imgContainer = useRef(null)
+  const imgContainer = useRef(null);
+  const title = useRef(null)
 
   useEffect(() => {
     const tl = gsap.timeline();
-    
-    tl
-    .from(imgContainer.current, {scale: 1.3, duration:3.25, ease:"power3.inOut"})
-    .from(img.current, { scale: 2, duration: 3.2, ease:"power4.inOut"}, '-=3.1')
+
+    tl.from(imgContainer.current, {
+      scale: 1.3,
+      duration: 3.25,
+      ease: "power3.inOut",
+    }).from(
+      img.current,
+      { scale: 2, duration: 3.2, ease: "power4.inOut" },
+      "-=3.1"
+    ).to(title.current, {y: 0})
   });
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
-      <div className="flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
-        <h1 className="title translate-y-32">Hey, I&apos;m Huy</h1>
-        <h1 className="title font-outline-4 text-transparent">Hey, I&apos;m Huy</h1>
-        <h1 className="title">Hey, I&apos;m Huy</h1>
+      <div className="z-10 flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
+        <div className="title">
+          <h1 className="translate-y-36">Hey, I&apos;m Huy</h1>
+        </div>
+        <div className="title">
+          <h1 className="title font-outline-4 translate-y-36 text-transparent">
+            Hey, I&apos;m Huy
+          </h1>
+        </div>
+        <div className="title">
+          <h1 className="translate-y-36">Hey, I&apos;m Huy</h1>
+        </div>
       </div>
-      <div ref={imgContainer} className="-z-10 absolute mx-auto w-1/2 rounded-md overflow-hidden">
+      <div
+        ref={imgContainer}
+        className="absolute mx-auto w-1/2 overflow-hidden rounded-md"
+      >
         <img
           ref={img}
-          className="rounded-md opacity-50 scale-1"
+          className="scale-1 rounded-md opacity-50"
           src={heroImg}
           alt="Abstract cubic background image."
         />
