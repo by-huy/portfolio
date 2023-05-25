@@ -3,24 +3,12 @@ import { useRef, useEffect } from "react";
 
 export default function Hero() {
   const img = useRef(null);
-  const scrollLine = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline();
     tl;
   });
 
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1 });
-    tl.from(scrollLine.current, {
-      height: 0,
-    }).to(scrollLine.current, {
-      height: 45,
-      duration: 2,
-      opacity: 0,
-      ease: "expo.out",
-    });
-  });
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
@@ -34,7 +22,7 @@ export default function Hero() {
           ref={img}
           className="  rounded-md opacity-50 "
           src="src/assets/images/heroimg.webp"
-          alt=""
+          alt="Abstract cubic background image"
         />
       </div>
     </div>
