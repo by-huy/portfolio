@@ -37,16 +37,6 @@ export default function Hero() {
           alt=""
         />
       </div>
-
-      <div className="overflow absolute bottom-16 right-2 flex flex-col space-y-3">
-        <span className="flex rotate-90 items-center text-body-3">scroll</span>
-        <div className="inset-0 mx-auto h-full overflow-hidden">
-          <span
-            ref={scrollLine}
-            className="absolute w-[0.08em] bg-accent-300"
-          ></span>
-        </div>
-      </div>
     </div>
   );
 }
