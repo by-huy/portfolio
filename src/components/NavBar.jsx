@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <header className="flex justify-between items-center p-5">
+    <header className="flex justify-between items-center p-5 fixed z-50 mix-blend-multiply w-full">
       <a href="/">
         <svg
           width="80"
@@ -21,11 +21,11 @@ export default function NavBar() {
           />
         </svg>
       </a>
-      <nav className="space-x-10">
+      <nav className="space-x-10 font-grotesk text-body-3">
         <a href="#about">about</a>
         <a href="#services">services</a>
         <a href="#works">works</a>
-        <a href="">let's talk</a>
+        <a className="bg-accent-300 px-8 py-3 rounded-full text-secondary-200" href="#contact">let&apos;s talk.</a>
       </nav>
     </header>
   );

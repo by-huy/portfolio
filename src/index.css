@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "CabinetGrotesk-Variable";
+  src: url("./assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GeneralSans-Variable";
+  src: url("./assets/fonts/GeneralSans-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@layer base {
+  html {
+    background-color: #fafaf9;
+  }
+
+  a,
+  p,
+  span {
+    @apply font-grotesk;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-general tracking-headings;
+  }
+
+  .font-outline-4 {
+    -webkit-text-stroke: 5px black;
+  }
+}
+
+@layer components {
+}
