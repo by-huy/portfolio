@@ -16,12 +16,12 @@ export default function Hero() {
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
-      <div className="z-10 flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
-        <h1>Hey, I&apos;m Huy</h1>
-        <h1 className="font-outline-4 text-transparent">Hey, I&apos;m Huy</h1>
-        <h1>Hey, I&apos;m Huy</h1>
+      <div className="flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
+        <h1 className="title translate-y-32">Hey, I&apos;m Huy</h1>
+        <h1 className="title font-outline-4 text-transparent">Hey, I&apos;m Huy</h1>
+        <h1 className="title">Hey, I&apos;m Huy</h1>
       </div>
-      <div ref={imgContainer} className="absolute mx-auto w-1/2 rounded-md overflow-hidden">
+      <div ref={imgContainer} className="-z-10 absolute mx-auto w-1/2 rounded-md overflow-hidden">
         <img
           ref={img}
           className="rounded-md opacity-50 scale-1"
