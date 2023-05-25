@@ -5,8 +5,7 @@ import heroImg from "../assets/images/heroimg.webp";
 export default function Hero() {
   const img = useRef(null);
   const imgContainer = useRef(null);
-  const title = useRef(null)
-  let allTitles = gsap.utils.selector(title)
+  const titles = useRef([]);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -19,22 +18,30 @@ export default function Hero() {
       img.current,
       { scale: 2, duration: 3.2, ease: "power4.inOut" },
       "-=3.1"
-    ).to(allTitles.current, {y: 0, duration: 2, ease: "power4.inOut"})
-  });
+    ).to(titles.current, {y: 0, duration: 2, ease: "power4.inOut"})
+
+  }, []);
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
       <div className="z-10 flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
         <div className="title">
-          <h1 ref={title} className="translate-y-36">Hey, I&apos;m Huy</h1>
-        </div>
-        <div className="title">
-          <h1 ref={title} className="title font-outline-4 translate-y-36 text-transparent">
+          <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
             Hey, I&apos;m Huy
           </h1>
         </div>
         <div className="title">
-          <h1 ref={title} className="translate-y-36">Hey, I&apos;m Huy</h1>
+          <h1
+            ref={(el) => (titles.current[1] = el)}
+            className="title font-outline-4 translate-y-36 text-transparent"
+          >
+            Hey, I&apos;m Huy
+          </h1>
+        </div>
+        <div className="title">
+          <h1 ref={(el) => (titles.current[2] = el)} className="translate-y-36">
+            Hey, I&apos;m Huy
+          </h1>
         </div>
       </div>
       <div
