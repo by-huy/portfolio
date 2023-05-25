@@ -24,14 +24,14 @@ export default function Hero() {
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
-      <div className="z-10 flex flex-col text-title font-semibold uppercase leading-[1.1em] text-accent-300">
-        <div className="title">
+      <div className="z-10 flex flex-col text-title font-semibold uppercase leading-tight md:leading-[1.1em] text-accent-300 px-3 h-fit">
+        <div className="title border border-black h-fit min-w-full">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
             Hey, I&apos;m Huy
           </h1>
         </div>
-        <div className="title">
+        <div className=" title">
           <h1
             ref={(el) => (titles.current[1] = el)}
             className="title font-outline-4 translate-y-36 text-transparent"
@@ -39,7 +39,7 @@ export default function Hero() {
             Hey, I&apos;m Huy
           </h1>
         </div>
-        <div className="title">
+        <div className=" title">
           <h1 ref={(el) => (titles.current[2] = el)} className="translate-y-36">
             Hey, I&apos;m Huy
           </h1>
@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
       <div
         ref={imgContainer}
-        className="absolute mx-auto w-1/2 overflow-hidden rounded-md"
+        className="absolute mx-auto aspect-square md:aspect-auto w-1/2 overflow-hidden rounded-md"
       >
         <img
           ref={img}

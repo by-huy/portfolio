@@ -55,6 +55,10 @@
 
 @layer utilities {
   .title {
-    clip-path: polygon(0 0, 150% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 200% 0, 100% 100%, 0% 100%);
+  }
+
+  h1 {
+    font-size: clamp(2.75rem, 16vw, 10rem);
   }
 }
