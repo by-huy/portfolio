@@ -14,18 +14,19 @@ export default function Hero() {
       scale: 1.3,
       duration: 3.25,
       ease: "power3.inOut",
-    }).from(
-      img.current,
-      { scale: 2, duration: 3.2, ease: "power4.inOut" },
-      "-=3.1"
-    ).to(titles.current, {y: 0, duration: 2, ease: "power4.inOut"}, "-=2.5")
-
+    })
+      .from(
+        img.current,
+        { scale: 2, duration: 3.2, ease: "power4.inOut" },
+        "-=3.1"
+      )
+      .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5");
   }, []);
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
       {/* Make leading also fluid along with the fluid typography */}
-      <div className="z-10 flex flex-col text-title font-semibold uppercase  text-accent-300 px-3 h-fit">
+      <div className="z-10 flex h-fit flex-col px-3 text-title  font-semibold uppercase text-accent-300">
         <div className="title h-fit min-w-full ">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
@@ -52,7 +53,7 @@ export default function Hero() {
       >
         <img
           ref={img}
-          className="scale-1 rounded-md aspect-[4/3] opacity-50"
+          className="scale-1 aspect-square md:aspect-[4/3] rounded-md opacity-50"
           src={heroImg}
           alt="Abstract cubic background image."
         />
