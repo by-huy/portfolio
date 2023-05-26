@@ -55,7 +55,7 @@
 
 @layer utilities {
   .title {
-    clip-path: polygon(0 0, 200% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 200% 0, 100% 102%, 0% 102%);
   }
 
   h1 {
