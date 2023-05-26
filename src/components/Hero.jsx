@@ -25,8 +25,8 @@ export default function Hero() {
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
       {/* Make leading also fluid along with the fluid typography */}
-      <div className="z-10 flex flex-col text-title font-semibold uppercase border border-black  text-accent-300 px-3 h-fit">
-        <div className="title h-fit min-w-full border border-red-700">
+      <div className="z-10 flex flex-col text-title font-semibold uppercase  text-accent-300 px-3 h-fit">
+        <div className="title h-fit min-w-full ">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
             Hey, I&apos;m Huy
@@ -48,7 +48,7 @@ export default function Hero() {
       </div>
       <div
         ref={imgContainer}
-        className="absolute mx-auto aspect-square md:aspect-auto w-1/2 overflow-hidden rounded-md"
+        className="absolute mx-auto aspect-auto w-1/2 overflow-hidden rounded-md"
       >
         <img
           ref={img}
