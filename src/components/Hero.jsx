@@ -48,11 +48,11 @@ export default function Hero() {
       </div>
       <div
         ref={imgContainer}
-        className="absolute mx-auto aspect-auto w-2/3 overflow-hidden rounded-md"
+        className="absolute mx-auto  w-1/2 overflow-hidden rounded-md"
       >
         <img
           ref={img}
-          className="scale-1 rounded-md opacity-50"
+          className="scale-1 rounded-md aspect-square lg:aspect-auto opacity-50"
           src={heroImg}
           alt="Abstract cubic background image."
         />
