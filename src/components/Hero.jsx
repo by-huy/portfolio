@@ -48,7 +48,7 @@ export default function Hero() {
       </div>
       <div
         ref={imgContainer}
-        className="absolute mx-auto aspect-auto w-1/2 overflow-hidden rounded-md"
+        className="absolute mx-auto aspect-auto w-2/3 overflow-hidden rounded-md"
       >
         <img
           ref={img}
