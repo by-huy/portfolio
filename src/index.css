@@ -59,6 +59,10 @@
   }
 
   h1 {
-    font-size: clamp(2.75rem, 16vw, 10rem);
+    font-size: clamp(2.75rem, 15vw, 10rem);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Number of lines to display */
+    line-height: 1.05; /* Set the desired line height */
   }
 }
