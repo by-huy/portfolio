@@ -6,6 +6,7 @@ export default function Hero() {
   const img = useRef(null);
   const imgContainer = useRef(null);
   const titles = useRef([]);
+  const scrollLine = useRef(null)
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -26,7 +27,7 @@ export default function Hero() {
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
       {/* Make leading also fluid along with the fluid typography */}
-      <div className="z-10 flex h-fit flex-col px-3 text-title  font-semibold uppercase text-accent-300">
+      <div className="z-10 flex h-fit flex-col px-3 text-title  font-semibold uppercase text-accent-300 overflow-hidden">
         <div className="title h-fit min-w-full ">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
@@ -57,6 +58,15 @@ export default function Hero() {
           src={heroImg}
           alt="Abstract cubic background image."
         />
+      </div>
+      <div className="absolute bottom-16 right-2 flex flex-col space-y-3 overflow">
+        <span className="flex rotate-90 items-center text-body-3">scroll</span>
+        <div className="relative overflow-hidden h-full">
+          <span
+            ref={scrollLine}
+            className="absolute w-4 h-1 bg-accent-300"
+          ></span>
+        </div>
       </div>
     </div>
   );
