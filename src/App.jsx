@@ -1,16 +1,101 @@
-import NavBar from "./components/NavBar"
-import Hero from "./components/Hero"
+import NavBar from "./components/NavBar";
+import { gsap } from "gsap";
+import { useRef, useEffect } from "react";
+import heroImg from "./assets/images/heroimg.webp";
 
 function App() {
- 
+  const img = useRef(null);
+  const imgContainer = useRef(null);
+  const titles = useRef([]);
+  const scrollLine = useRef(null);
+  const scroll = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1 });
+    tl.from(scrollLine.current, {
+      translateX: -40,
+      duration: 1.5,
+      ease: "power4.inOut",
+    });
+  }, []);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.from(imgContainer.current, {
+      scale: 1.3,
+      duration: 3.25,
+      ease: "power3.inOut",
+    })
+      .from(
+        img.current,
+        { scale: 2, duration: 3.2, ease: "power4.inOut" },
+        "-=3.1"
+      )
+      .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5")
+      .from(scroll.current, { opacity: 0, duration: 1, ease: "out" }, "-=2");
+  }, []);
+
   return (
     <div>
       <NavBar />
       <main>
-        <Hero />
+        <section className="relative flex h-screen select-none items-center justify-center">
+          {/* Make leading also fluid along with the fluid typography */}
+          <div className="z-10 flex h-fit flex-col overflow-hidden px-3  text-title font-semibold uppercase text-accent-300">
+            <div className="title h-fit min-w-full ">
+              {/* Learn more about useRef */}
+              <h1
+                ref={(el) => (titles.current[0] = el)}
+                className="translate-y-36"
+              >
+                Hey, I&apos;m Huy
+              </h1>
+            </div>
+            <div className=" title">
+              <h1
+                ref={(el) => (titles.current[1] = el)}
+                className="title font-outline-3 md:font-outline-4 translate-y-36 text-transparent"
+              >
+                Hey, I&apos;m Huy
+              </h1>
+            </div>
+            <div className=" title">
+              <h1
+                ref={(el) => (titles.current[2] = el)}
+                className="translate-y-36"
+              >
+                Hey, I&apos;m Huy
+              </h1>
+            </div>
+          </div>
+          <div
+            ref={imgContainer}
+            className="absolute mx-auto  w-[55%] overflow-hidden rounded-md"
+          >
+            <img
+              ref={img}
+              className="scale-1 aspect-[5/6] rounded-md opacity-50 lg:aspect-auto"
+              src={heroImg}
+              alt="Abstract cubic background image."
+            />
+          </div>
+          <div
+            ref={scroll}
+            className="absolute bottom-12 right-2 flex flex-col items-center justify-center space-y-8"
+          >
+            <span className=" rotate-90 text-body-3">scroll</span>
+            <div className="relative h-1 w-10 rotate-90 overflow-hidden">
+              <span
+                ref={scrollLine}
+                className="absolute h-[0.08em] w-10 translate-x-10 bg-accent-300"
+              ></span>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
