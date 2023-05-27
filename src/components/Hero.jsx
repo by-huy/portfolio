@@ -66,9 +66,9 @@ export default function Hero() {
           alt="Abstract cubic background image."
         />
       </div>
-      <div className="absolute bottom-16 right-2 flex flex-col space-y-8 items-center justify-center border border-red-800">
-        <span className=" rotate-90 text-body-3 border border-blue-500">scroll</span>
-        <div className="relative h-1 rotate-90 w-10 overflow-hidden border border-green-700">
+      <div className="absolute bottom-16 right-2 flex flex-col space-y-8 items-center justify-center">
+        <span className=" rotate-90 text-body-3">scroll</span>
+        <div className="relative h-1 rotate-90 w-10 overflow-hidden">
           <span
             ref={scrollLine}
             className="absolute w-10 h-[0.08em] translate-x-10 bg-accent-300"
