@@ -59,6 +59,6 @@
   }
 
   .title {
-    line-height: clamp(5.5rem, 15vw, 10rem); /* Set the desired line height */
+    line-height: clamp(5.5rem, 20.5vw, 10rem); /* Set the desired line height */
   }
 }
