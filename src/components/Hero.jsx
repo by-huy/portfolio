@@ -6,12 +6,16 @@ export default function Hero() {
   const img = useRef(null);
   const imgContainer = useRef(null);
   const titles = useRef([]);
-  const scrollLine = useRef(null)
+  const scrollLine = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({repeat: -1})
-    tl.from(scrollLine.current, ({translateX: -40, duration: 1.5, ease: "power4.inOut"}))
-  }, [])
+    const tl = gsap.timeline({ repeat: -1 });
+    tl.from(scrollLine.current, {
+      translateX: -40,
+      duration: 1.5,
+      ease: "power4.inOut",
+    });
+  }, []);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -29,12 +33,10 @@ export default function Hero() {
       .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5");
   }, []);
 
-  
-
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
       {/* Make leading also fluid along with the fluid typography */}
-      <div className="z-10 flex h-fit flex-col px-3 text-title  font-semibold uppercase text-accent-300 overflow-hidden">
+      <div className="z-10 flex h-fit flex-col overflow-hidden px-3  text-title font-semibold uppercase text-accent-300">
         <div className="title h-fit min-w-full ">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
@@ -61,17 +63,17 @@ export default function Hero() {
       >
         <img
           ref={img}
-          className="scale-1 aspect-[5/6] lg:aspect-auto rounded-md opacity-50"
+          className="scale-1 aspect-[5/6] rounded-md opacity-50 lg:aspect-auto"
           src={heroImg}
           alt="Abstract cubic background image."
         />
       </div>
-      <div className="absolute bottom-16 right-2 flex flex-col space-y-8 items-center justify-center">
+      <div className="absolute bottom-16 right-2 flex flex-col items-center justify-center space-y-8">
         <span className=" rotate-90 text-body-3">scroll</span>
-        <div className="relative h-1 rotate-90 w-10 overflow-hidden">
+        <div className="relative h-1 w-10 rotate-90 overflow-hidden">
           <span
             ref={scrollLine}
-            className="absolute w-10 h-[0.08em] translate-x-10 bg-accent-300"
+            className="absolute h-[0.08em] w-10 translate-x-10 bg-accent-300"
           ></span>
         </div>
       </div>
