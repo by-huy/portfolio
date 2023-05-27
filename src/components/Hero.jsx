@@ -71,7 +71,7 @@ export default function Hero() {
         <div className="relative h-1 rotate-90 w-10 overflow-hidden border border-green-700">
           <span
             ref={scrollLine}
-            className="absolute w-10 h-[0.08em] translate-x-0 bg-accent-300"
+            className="absolute w-10 h-[0.08em] translate-x-10 bg-accent-300"
           ></span>
         </div>
       </div>
