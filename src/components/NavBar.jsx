@@ -14,6 +14,7 @@ export default function NavBar() {
       ref={navBar}
       className=" fixed z-50 flex w-full -translate-y-full items-center justify-between px-5 py-3 mix-blend-multiply"
     >
+      {/* logo */}
       <a href="/">
         <svg
           width="80"
@@ -34,7 +35,8 @@ export default function NavBar() {
           />
         </svg>
       </a>
-      <nav className="space-x-7 font-grotesk text-body-3">
+      {/* nav links */}
+      <nav className="space-x-7 font-grotesk text-body-3 hidden sm:block">
         <a href="#about">about</a>
         <a href="#services">services</a>
         <a href="#works">works</a>
@@ -45,6 +47,19 @@ export default function NavBar() {
           let&apos;s talk.
         </a>
       </nav>
+      {/* hamburger button */}
+      <button
+          id="hamburger-btn"
+          className="flex cursor-pointer relative items-center transition duration-500 ease-in-out w-10 h-7 space-y-1 sm:hidden"
+        >
+          <div
+            className="line-1 absolute hamburger-0 w-9 h-[0.16rem] bg-accent-400 transition rounded-full duration-200 -translate-y-1"
+          ></div>
+          <div
+            className="absolute hamburger w-9 h-[0.16rem] bg-accent-400 transition rounded-full duration-200 translate-y-1"
+          ></div>
+          
+        </button>
     </header>
   );
 }
