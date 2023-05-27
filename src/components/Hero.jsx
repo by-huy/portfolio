@@ -9,6 +9,11 @@ export default function Hero() {
   const scrollLine = useRef(null)
 
   useEffect(() => {
+    const tl = gsap.timeline({repeat: -1})
+    tl.from(scrollLine.current, ({width: '0px', duration: 1.5, ease: "power4.inOut"}))
+  }, [])
+
+  useEffect(() => {
     const tl = gsap.timeline();
 
     tl.from(imgContainer.current, {
@@ -23,6 +28,8 @@ export default function Hero() {
       )
       .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5");
   }, []);
+
+  
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
@@ -59,12 +66,12 @@ export default function Hero() {
           alt="Abstract cubic background image."
         />
       </div>
-      <div className="absolute bottom-16 right-2 flex flex-col space-y-3 overflow">
+      <div className="absolute bottom-16 right-2 flex flex-col space-y-3 overflow items-center justify-center">
         <span className="flex rotate-90 items-center text-body-3">scroll</span>
-        <div className="relative overflow-hidden h-full">
+        <div className="relative h-1 rotate-90">
           <span
             ref={scrollLine}
-            className="absolute w-4 h-1 bg-accent-300"
+            className="absolute w-10 h-[0.08em] bg-accent-300"
           ></span>
         </div>
       </div>
