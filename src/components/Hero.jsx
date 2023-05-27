@@ -32,7 +32,7 @@ export default function Hero() {
         "-=3.1"
       )
       .to(titles.current, { y: 0, duration: 2, ease: "power4.inOut" }, "-=2.5")
-      .from(scroll.current, {opacity: 0, ease:"out"})
+      .from(scroll.current, {opacity: 0, duration: 1, ease:"out"}, "-=2")
   }, []);
 
   return (
