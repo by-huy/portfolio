@@ -48,6 +48,10 @@
   .font-outline-4 {
     -webkit-text-stroke: 5px black;
   }
+
+  .font-outline-3 {
+    -webkit-text-stroke: 4px #0E0E0C;
+  }
 }
 
 @layer components {

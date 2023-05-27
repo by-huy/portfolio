@@ -36,7 +36,7 @@ export default function Hero() {
         <div className=" title">
           <h1
             ref={(el) => (titles.current[1] = el)}
-            className="title font-outline-4 translate-y-36 text-transparent"
+            className="title font-outline-3 md:font-outline-4 translate-y-36 text-transparent"
           >
             Hey, I&apos;m Huy
           </h1>
