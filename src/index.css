@@ -58,11 +58,7 @@
     clip-path: polygon(0 0, 200% 0, 100% 102%, 0% 102%);
   }
 
-  h1 {
-    font-size: clamp(2.75rem, 15vw, 10rem);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Number of lines to display */
-    line-height: 1.05; /* Set the desired line height */
+  .title {
+    line-height: clamp(5.5rem, 15vw, 10rem); /* Set the desired line height */
   }
 }

@@ -22,7 +22,7 @@ export default {
         'accent-100': '#666666',
       },
       fontSize: {
-        'title': '10rem',
+        'title': ['clamp(2.75rem, 15vw, 9.5rem)'],
         'heading-1': '8rem',
         'heading-2': '4rem',
         'body-1': '2rem',
