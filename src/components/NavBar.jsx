@@ -26,6 +26,7 @@ export default function NavBar() {
       markers: true,
       animation: gsap.timeline()
         .to(navBar.current, { color: "#DDDDD5" })
+        // this animation targets every elements with the class of .bg-secondary-100
         .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0),
       toggleActions: "restart none none reverse"
     });
@@ -37,7 +38,7 @@ export default function NavBar() {
   return (
     <header
       ref={navBar}
-      className=" fixed z-50 flex w-full -translate-y-full items-center justify-between px-5 py-3"
+      className=" fixed z-50 flex w-full -translate-y-full items-center justify-between px-5 py-3 bg-secondary-100"
     >
       {/* logo */}
       <a href="/">
@@ -71,6 +72,7 @@ export default function NavBar() {
           let&apos;s talk.
         </a>
       </nav>
+      {/* TODO: Make hamburger change color */}
       {/* hamburger button */}
       <button
         id="hamburger-btn"
