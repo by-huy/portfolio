@@ -29,9 +29,6 @@
 }
 
 @layer base {
-  html {
-    background-color: #fafaf9;
-  }
 
   a,
   p,
