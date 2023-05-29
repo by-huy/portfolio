@@ -2,6 +2,7 @@ import profileImg from "/src/assets/images/profile.webp";
 
 export default function About() {
   return (
+    // TODO: Make this responsive for mobile
     <div className=" select-none  px-10">
       <div className="flex items-center justify-center space-x-4">
         <svg

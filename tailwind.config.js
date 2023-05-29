@@ -23,7 +23,7 @@ export default {
       },
       fontSize: {
         'title': ['clamp(2.75rem, 15vw, 9.5rem)'],
-        'heading-1': ['clamp(2rem, 10vw, 6rem)'],
+        'heading-1': ['clamp(2rem, 10.5vw, 6rem)'],
         'heading-2': ['clamp(3rem, 10vw, 4.75rem)'],
         'heading-3': ['clamp(3rem, 10vw, 2rem)'],
         'body-1': '1.5rem',
