@@ -1,6 +1,5 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
 
 // Import your components
 import NavBar from "./components/NavBar";
@@ -12,19 +11,19 @@ import About from "./components/About";
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page on initial load
+  // useEffect(() => {
+  //   window.scrollTo(0, 0); // Scroll to the top of the page on initial load
 
-    const handleBeforeUnload = () => {
-      window.scrollTo(0, 0); // Scroll to the top of the page before it unloads
-    };
+  //   const handleBeforeUnload = () => {
+  //     window.scrollTo(0, 0); // Scroll to the top of the page before it unloads
+  //   };
 
-    window.onbeforeunload = handleBeforeUnload;
+  //   window.onbeforeunload = handleBeforeUnload;
 
-    return () => {
-      window.onbeforeunload = null; 
-    };
-  }, []);
+  //   return () => {
+  //     window.onbeforeunload = null; 
+  //   };
+  // }, []);
 
   return (
     <div className="bg-secondary-100">

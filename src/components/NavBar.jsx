@@ -17,6 +17,7 @@ export default function NavBar() {
       duration: 3,
       delay: 0.5,
       ease: "power4.inOut",
+      
     });
 
     const navChangeSections = document.querySelectorAll('.nav-change')
@@ -26,7 +27,7 @@ export default function NavBar() {
         trigger: section,
         start: "top 175px",
         end: "bottom 150px",
-        markers: true,
+        // markers: true,
         animation: gsap.timeline()
           .to(navBar.current, { color: "#DDDDD5" })
           .to(hamburger.current, { backgroundColor: "#DDDDD5" },  0)

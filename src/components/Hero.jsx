@@ -37,7 +37,6 @@ export default function Hero() {
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
-      {/* Make leading also fluid along with the fluid typography */}
       <div className="z-10 flex h-fit flex-col overflow-hidden px-3  text-title font-semibold uppercase text-accent-300">
         <div className="title h-fit min-w-full ">
           {/* Learn more about useRef */}
