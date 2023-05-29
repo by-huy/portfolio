@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Role from "./components/Role";
+import About from "./components/About";
 
 // Initialize the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +21,9 @@ const App = () => {
         </section>
         <section className="nav-change">
           <Role />
+        </section>
+        <section>
+          <About />
         </section>
       </main>
     </div>

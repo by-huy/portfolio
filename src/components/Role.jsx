@@ -1,6 +1,6 @@
 export default function Role() {
   return (
-    <div className="flex flex-col h-screen items-center justify-center overflow-hidden">
+    <div className="flex flex-col h-screen items-center justify-center overflow-hidden border border-blue-500">
         <div>
           <h1 className=" text-secondary-400 text-heading-1 font-medium">Web Designer</h1>
           <span></span>
