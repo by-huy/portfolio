@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "@studio-freight/lenis";
 
 // Import your components
 import NavBar from "./components/NavBar";
@@ -7,24 +8,26 @@ import Hero from "./components/Hero";
 import Role from "./components/Role";
 import About from "./components/About";
 import Services from "./components/Services";
+import { useEffect } from "react";
 
 // Initialize the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0); // Scroll to the top of the page on initial load
+  useEffect(() => {
+    const lenis = new Lenis();
 
-  //   const handleBeforeUnload = () => {
-  //     window.scrollTo(0, 0); // Scroll to the top of the page before it unloads
-  //   };
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
 
-  //   window.onbeforeunload = handleBeforeUnload;
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-  //   return () => {
-  //     window.onbeforeunload = null; 
-  //   };
-  // }, []);
+    requestAnimationFrame(raf);
+  });
 
   return (
     <div className="bg-secondary-100">
