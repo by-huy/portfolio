@@ -64,7 +64,7 @@ export default function Hero() {
       >
         <img
           ref={img}
-          className="scale-1 aspect-[5/6] rounded-md opacity-50 lg:aspect-auto"
+          className="scale-1 aspect-[11/16] sm:aspect-[5/6] md:aspect-[4/3] rounded-md opacity-50 lg:aspect-auto"
           src={heroImg}
           alt="Abstract cubic background image."
         />
