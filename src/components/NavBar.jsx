@@ -9,8 +9,7 @@ export default function NavBar() {
   const logo = useRef(null)
   const hamburger = useRef([])
   const tl = gsap.timeline();
-
- 
+  const cta = useRef(null)
 
   useEffect(() => {
     tl.to(navBar.current, {
@@ -27,9 +26,10 @@ export default function NavBar() {
       // markers: true,
       animation: gsap.timeline()
         .to(navBar.current, { color: "#DDDDD5" })
+        .to(hamburger.current, { backgroundColor: "#DDDDD5" },  0)
         // this animation targets every elements with the class of .bg-secondary-100
         .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0)
-        .to(hamburger.current, { backgroundColor: "#DDDDD5" }, 0),
+        .to(cta.current, { backgroundColor: "#8C8C73" }, 0),
       toggleActions: "restart reverse restart reverse"
     });
 
@@ -62,26 +62,24 @@ export default function NavBar() {
           />
         </svg>
       </a>
-      {/* nav links */}
       <nav className="hidden space-x-7 font-grotesk text-body-3 sm:block">
         <a href="#about">about</a>
         <a href="#services">services</a>
         <a href="#works">works</a>
         <a
+          ref={cta}
           className="rounded-full bg-accent-300 px-8 py-3 text-secondary-200"
           href="#contact"
         >
           let&apos;s talk.
         </a>
       </nav>
-      {/* TODO: Make hamburger change color */}
-      {/* hamburger button */}
       <button
         id="hamburger-btn"
         className="relative flex h-7 w-10 cursor-pointer items-center space-y-1 transition duration-500 ease-in-out sm:hidden"
       >
-        <span ref={(el) => hamburger.current[0] = el} className="line-1 hamburger-0 absolute h-[0.16rem] w-9 -translate-y-1 rounded-full bg-accent-400 transition duration-200"></span>
-        <span ref={(el) => hamburger.current[1] = el} className="hamburger absolute h-[0.16rem] w-9 translate-y-1 rounded-full bg-accent-400 transition duration-200"></span>
+        <span ref={(el) => hamburger.current[0] = el} className="line-1 hamburger-0 absolute h-[0.16rem] w-9 -translate-y-1 rounded-full bg-accent-400 transition-transform duration-200"></span>
+        <span ref={(el) => hamburger.current[1] = el} className="hamburger absolute h-[0.16rem] w-9 translate-y-1 rounded-full bg-accent-400 transition-transform duration-200"></span>
       </button>
     </header>
   );
