@@ -25,9 +25,9 @@ export default function NavBar() {
     navChangeSections.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
-        start: "top 175px",
+        start: "-100px 175px",
         end: "bottom 150px",
-        // markers: true,
+        markers: true,
         animation: gsap.timeline()
           .to(navBar.current, { color: "#DDDDD5" })
           .to(hamburger.current, { backgroundColor: "#DDDDD5" },  0)
