@@ -55,6 +55,7 @@ export default function About() {
               passionate in catering my works for emerging start ups and small
               businesses.
               <br></br>
+              <br></br>
               When I am not developing or designing, I like to create videos
               that talk about frontend development, productivity and technology
               on YouTube. I also enjoy spending time distracting myself by
