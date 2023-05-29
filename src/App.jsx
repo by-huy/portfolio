@@ -25,6 +25,9 @@ const App = () => {
         <section>
           <About />
         </section>
+        <section className="nav-change">
+          <About />
+        </section>
       </main>
     </div>
   );

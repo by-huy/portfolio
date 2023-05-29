@@ -19,19 +19,25 @@ export default function NavBar() {
       ease: "power4.inOut",
     });
 
-    ScrollTrigger.create({
-      trigger: ".nav-change",
-      start: "top 175px",
-      end: "bottom 150px",
-      // markers: true,
-      animation: gsap.timeline()
-        .to(navBar.current, { color: "#DDDDD5" })
-        .to(hamburger.current, { backgroundColor: "#DDDDD5" },  0)
-        // this animation targets every elements with the class of .bg-secondary-100
-        .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0)
-        .to(cta.current, { backgroundColor: "#8C8C73" }, 0),
-      toggleActions: "restart reverse restart reverse"
-    });
+    const navChangeSections = document.querySelectorAll('.nav-change')
+
+    navChangeSections.forEach((section) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 175px",
+        end: "bottom 150px",
+        markers: true,
+        animation: gsap.timeline()
+          .to(navBar.current, { color: "#DDDDD5" })
+          .to(hamburger.current, { backgroundColor: "#DDDDD5" },  0)
+          // this animation targets every elements with the class of .bg-secondary-100
+          .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0)
+          .to(cta.current, { backgroundColor: "#8C8C73" }, 0),
+        toggleActions: "restart reverse restart reverse"
+      });
+    })
+
+   
 
   });
 
