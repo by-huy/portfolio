@@ -6,10 +6,10 @@ export default function Role() {
   ScrollTrigger.create({});
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center overflow-hidden border border-blue-500">
+    <div className="flex h-screen flex-col items-center justify-center overflow-hidden">
       <div className="flex w-full items-center justify-center space-x-20 px-10">
         <h1 className="text-heading-1 font-medium text-secondary-400 leading-tight">
-          I am a self-taught frontend developer web designer and ui/ux designer.
+        I create elevating digital experiences that connect with people through development and design.
         </h1>
       </div>
     </div>
