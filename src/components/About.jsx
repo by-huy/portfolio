@@ -1,6 +1,8 @@
+import profileImg from "/src/assets/images/profile.webp";
+
 export default function About() {
   return (
-    <div className="h-screen px-10">
+    <div className=" select-none  px-10">
       <div className="flex items-center justify-center space-x-4">
         <svg
           width="32"
@@ -16,7 +18,7 @@ export default function About() {
             fill="#8C8C73"
           />
         </svg>
-        <h2 className="text-heading-2 font-medium uppercase text-secondary-600">
+        <h2 className="text-heading-1 font-medium uppercase text-secondary-600">
           my profile
         </h2>
         <svg
@@ -34,25 +36,31 @@ export default function About() {
           />
         </svg>
       </div>
-      <div className="flex justify-evenly overflow-hidden">
-        <div className="">
+      <div className="flex w-full gap-10 mt-12 items-start">
+        <div>
           <img
-            className="rounded-md max-w-sm"
-            src="src/assets/images/profile.webp"
+            className="rounded-md object-cover"
+            height="20px"
+            src={profileImg}
             alt=""
           />
         </div>
-        <div>
-          <h3>A brief intro... who am I?</h3>
-          <p>
-            I am a young Vietnamese guy who is passionate in creating
-            accessible, functional and elevating web experiences that inspire
-            and connect with people. When I am not developing or designing, I
-            like to create videos that talk about frontend development,
-            productivity and technology on YouTube. I also enjoy spending time
-            distracting myself by playing the guitar, reading some cool books or
-            binge anime.
-          </p>
+        <div className="sticky top-32">
+          <div className="w-full space-y-4">
+            <h3 className="text-heading-3 font-medium leading-tight">
+              A brief intro... who am I?
+            </h3>
+            <p className="text-body-1">
+              I am a self-taught frontend developer and web designer. I am
+              passionate in catering my works for emerging start ups and small
+              businesses.
+              <br></br>
+              When I am not developing or designing, I like to create videos
+              that talk about frontend development, productivity and technology
+              on YouTube. I also enjoy spending time distracting myself by
+              playing the guitar, reading some cool books or binge anime.
+            </p>
+          </div>
         </div>
       </div>
     </div>
