@@ -8,12 +8,13 @@ import About from "./components/About";
 import Services from "./components/Services";
 import { useEffect } from "react";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
+
   useEffect(() => {
-    
-    window.onload = scrollTo(0,0)
+    window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
@@ -26,8 +27,7 @@ const App = () => {
 
     requestAnimationFrame(raf);
 
-
-  },);
+  });
 
   return (
     <div className="bg-secondary-100">
