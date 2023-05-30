@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 export default function Role() {
+
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.create({});
 

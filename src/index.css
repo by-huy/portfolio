@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.disable-zoom {
-  zoom: reset;
-}
-
 .text-smooth {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +25,14 @@
 }
 
 @layer base {
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
 
   a,
   p,

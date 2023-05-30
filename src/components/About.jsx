@@ -20,7 +20,7 @@ export default function About() {
           />
         </svg>
         <h2 className="text-heading-1 font-medium uppercase text-secondary-600">
-          my profile
+          about me
         </h2>
         <svg
           width="32"
@@ -49,12 +49,12 @@ export default function About() {
         <div className="sm:sticky top-20 md:top-28 lg:top-32">
           <div className="w-full space-y-4">
             <h3 className="text-heading-3 font-medium leading-tight">
-              A brief intro... who am I?
+              A brief intro, who am I?
             </h3>
             <p className="text-body-1">
               I am a self-taught frontend developer, web designer, and UI/UX designer based in Melbourne, Australia. I am
               passionate in catering my works for emerging start ups and small
-              businesses 😎.
+              businesses that inspire and connect with people 😎.
               <br></br>
               <br></br>
               When I am not developing or designing, I like to create videos
