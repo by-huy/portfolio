@@ -14,10 +14,6 @@ gsap.registerPlugin(ScrollTrigger);
 const App = () => {
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
-  useEffect(() => {
     const lenis = new Lenis();
 
     function raf(time) {
@@ -42,7 +38,7 @@ const App = () => {
         <section>
           <About />
         </section>
-        <section>
+        <section id="services">
           <Services />
         </section>
       </main>

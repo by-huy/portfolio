@@ -2,10 +2,10 @@ import profileImg from "/src/assets/images/profile.webp";
 
 export default function About() {
   return (
-    // TODO: Make this responsive for mobile
     <div className=" select-none  px-10">
-      <div className="flex items-center justify-center space-x-4">
+      <div className="flex items-center justify-center space-x-3">
         <svg
+          className="scale-75 sm:scale-100"
           width="32"
           height="16"
           viewBox="0 0 32 16"
@@ -19,10 +19,11 @@ export default function About() {
             fill="#8C8C73"
           />
         </svg>
-        <h2 className="text-heading-1 font-medium uppercase text-secondary-600">
+        <h2 className="text-heading-1 font-medium uppercase text-secondary-600 w-fit">
           about me
         </h2>
         <svg
+          className="scale-75 sm:scale-100"
           width="32"
           height="16"
           viewBox="0 0 32 16"
@@ -48,7 +49,7 @@ export default function About() {
         </div>
         <div className="sm:sticky top-20 md:top-28 lg:top-32">
           <div className="w-full space-y-4">
-            <h3 className="text-heading-3 font-medium leading-tight">
+            <h3 className="text-heading-3 font-semibold leading-tight">
               A brief intro, who am I?
             </h3>
             <p className="text-body-1">

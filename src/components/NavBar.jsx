@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
 export default function NavBar() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -50,7 +51,7 @@ export default function NavBar() {
       className=" fixed z-50 flex w-full -translate-y-full items-center justify-between px-5 py-3 bg-secondary-100"
     >
       {/* logo */}
-      <a href="/">
+      <a href=".">
         <svg
           ref={logo}
           width="80"
