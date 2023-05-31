@@ -1,25 +1,7 @@
 import profileImg from "/src/assets/images/profile.webp";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
 
 export default function About() {
-  gsap.registerPlugin(ScrollTrigger);
-  const heading = useRef(null);
-
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: ".section-heading",
-      start: "top 550px",
-      end: "bottom 100px",
-      markers: true,
-      scrub: true,
-      animation: gsap.to(heading.current, {opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }),
-      toggleActions: "none none none none",
-    });
-
-    
-  }, []);
+  
 
   return (
     <div className=" select-none px-10">
@@ -27,7 +9,7 @@ export default function About() {
         
         className="section-heading"
       >
-        <div ref={heading} className="flex items-center justify-center space-x-3 translate-y-28">
+        <div className="flex items-center justify-center space-x-3 translate-y-28 heading">
           <svg
             className="scale-75 sm:scale-100"
             width="32"
