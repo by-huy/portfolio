@@ -9,30 +9,31 @@ import Services from "./components/Services";
 import { useEffect } from "react";
 
 
-gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
-
   gsap.registerPlugin(ScrollTrigger);
 
-  const sectionHeadings = document.querySelectorAll(".section-heading");
-  const headings = document.querySelectorAll(".heading")
-
   useEffect(() => {
+    const sectionHeadings = document.querySelectorAll(".section-heading");
+
     sectionHeadings.forEach((heading) => {
-      ScrollTrigger.create({
-        trigger: heading,
-        start: "top 550px",
-        end: "bottom 100px",
-        markers: true,
-        scrub: true,
-        animation: gsap.to(headings, {
-          opacity: 1,
-          y: 0,
-          ease: "power4.out",
-          duration: 1.25,
-        }),
-        toggleActions: "none none none none",
+      const headings = heading.querySelectorAll(".heading");
+
+      headings.forEach((individualHeading) => {
+        ScrollTrigger.create({
+          trigger: individualHeading,
+          start: "top 550px",
+          end: "bottom 100px",
+          markers: true,
+          scrub: true,
+          animation: gsap.to(individualHeading, {
+            opacity: 1,
+            y: 0,
+            ease: "power4.out",
+            duration: 1.25,
+          }),
+          toggleActions: "none none none none",
+        });
       });
     });
   }, []);

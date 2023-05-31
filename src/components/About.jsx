@@ -1,15 +1,10 @@
 import profileImg from "/src/assets/images/profile.webp";
 
 export default function About() {
-  
-
   return (
     <div className=" select-none px-10">
-      <div
-        
-        className="section-heading"
-      >
-        <div className="flex items-center justify-center space-x-3 translate-y-28 heading">
+      <div className="section-heading">
+        <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
             className="scale-75 sm:scale-100"
             width="32"

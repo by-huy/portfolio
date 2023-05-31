@@ -1,13 +1,8 @@
-
 export default function Services() {
-  
-
   return (
     <div className="mt-20 select-none">
       <div className="section-heading px-5">
-        <div
-          className="flex translate-y-28 items-center justify-center space-x-3 heading"
-        >
+        <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
             className="scale-75 sm:scale-100"
             width="32"
