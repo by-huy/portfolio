@@ -2,10 +2,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "@studio-freight/lenis";
 import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import Role from "./components/Role";
-import About from "./components/About";
-import Services from "./components/Services";
+import Hero from "./components/homepage/Hero";
+import Role from "./components/homepage/Role";
+import About from "./components/homepage/About";
+import Services from "./components/homepage/Services";
 import { useEffect } from "react";
 
 
