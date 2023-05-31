@@ -44,40 +44,41 @@ export default function Works() {
           </svg>
         </div>
       </div>
+      {/* Make this responsive and dynamically render this instead */}
       <div className="grid grid-cols-12 gap-y-2 gap-16 mt-10">
         <div className="col-span-12">
             <img src={ibgroup} alt="" />
             <div className="mt-4">
                 <h4 className="uppercase text-works-title text-primary-200 font-medium">IB Group vietnam website</h4>
-                <p className="text-primary-300 font-light text-body-1">Web Design / Frontend Development</p>
+                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
             </div>
         </div>
         <div className="col-span-7 pt-16">
             <img src={memento} alt="" />
             <div className="mt-4">
                 <h4 className="uppercase text-works-title text-primary-200 font-medium">MEMENTO STUDIO LANDING PAGE</h4>
-                <p className="text-primary-300 font-light text-body-1">Web Design / Frontend Development</p>
+                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
             </div>
         </div>
         <div className="col-span-5 pt-80">
             <img src={acc} alt="" />
             <div className="mt-4">
                 <h4 className="uppercase text-works-title text-primary-200 font-medium">REAL BUSINESS ACCOUNTANTS PROJECT</h4>
-                <p className="text-primary-300 font-light text-body-1">Web Design / Frontend Development</p>
+                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
             </div>
         </div>
         <div className="col-span-8 h-fit pt-20">
             <img src={daddy} alt="" />
             <div className="mt-4">
                 <h4 className="uppercase text-works-title text-primary-200 font-medium">GODADDY LANDING PAGE CLONE</h4>
-                <p className="text-primary-300 font-light text-body-1">Web Design / Frontend Development</p>
+                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
             </div>
         </div>
         <div className="col-span-4 h-fit">
             <img src={sunnyside} alt="" />
             <div className="mt-4">
                 <h4 className="uppercase text-works-title text-primary-200 font-medium">SUNNYSIDE LANDING PAGE</h4>
-                <p className="text-primary-300 font-light text-body-1">Web Design / Frontend Development</p>
+                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
             </div>
         </div>
       </div>
