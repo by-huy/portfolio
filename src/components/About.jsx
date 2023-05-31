@@ -10,10 +10,12 @@ export default function About() {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: ".section-heading",
-      start: "top 500px",
+      start: "top 550px",
       end: "bottom 100px",
       markers: true,
+      scrub: true,
       animation: gsap.to(heading.current, {opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }),
+      toggleActions: "none none none none",
     });
 
     
@@ -23,7 +25,7 @@ export default function About() {
     <div className=" select-none px-10">
       <div
         
-        className="section-heading border"
+        className="section-heading"
       >
         <div ref={heading} className="flex items-center justify-center space-x-3 translate-y-28">
           <svg
@@ -67,7 +69,7 @@ export default function About() {
             className="aspect-square rounded-md object-cover object-center sm:aspect-auto"
             height="20px"
             src={profileImg}
-            alt=""
+            alt="portrait image of Huy standing in front of a tree and foliage"
           />
         </div>
         <div className="top-20 sm:sticky md:top-28 lg:top-32">
