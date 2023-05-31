@@ -24,13 +24,12 @@ const App = () => {
           trigger: individualHeading,
           start: "top 550px",
           end: "bottom 100px",
-          markers: true,
           scrub: true,
           animation: gsap.to(individualHeading, {
             opacity: 1,
             y: 0,
             ease: "power4.out",
-            duration: 1.25,
+            duration: 2,
           }),
           toggleActions: "none none none none",
         });
