@@ -1,14 +1,14 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+
 import Lenis from "@studio-freight/lenis";
 import NavBar from "./components/NavBar";
 import Hero from "./components/homepage/Hero";
 import Role from "./components/homepage/Role";
 import About from "./components/homepage/About";
 import Services from "./components/homepage/Services";
-import { useEffect } from "react";
-
-
+import Works from "./components/homepage/Works";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +46,6 @@ const App = () => {
     }
 
     requestAnimationFrame(raf);
-
   });
 
   return (
@@ -64,6 +63,9 @@ const App = () => {
         </section>
         <section id="services">
           <Services />
+        </section>
+        <section id="works" className="nav-change">
+          <Works />
         </section>
       </main>
     </div>
