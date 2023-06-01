@@ -52,8 +52,8 @@ const App = () => {
   return (
     <div className="bg-secondary-100">
       <NavBar />
+      <Hero />
       <main className="px-5 md:px-10">
-        <Hero />
         <Role />
         <About />
         <Services />

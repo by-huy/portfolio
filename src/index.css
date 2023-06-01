@@ -25,6 +25,10 @@
 }
 
 @layer base {
+/* 
+ * {
+  border: solid 1px red
+ } */
 
   a,
   p,

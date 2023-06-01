@@ -48,7 +48,7 @@ export default function NavBar() {
   return (
     <header
       ref={navBar}
-      className=" fixed z-50 flex w-full -translate-y-full items-center justify-between px-5 py-3 bg-secondary-100"
+      className="top-0 fixed z-50 flex w-full -translate-y-full items-center justify-between px-5 py-3 bg-secondary-100"
     >
       {/* logo */}
       <a href=".">
