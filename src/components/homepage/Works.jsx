@@ -1,12 +1,12 @@
-import ibgroup from "/src/assets/images/ib-group-desktop.webp"
-import memento from "/src/assets/images/memento-desktop.webp"
-import acc from "/src/assets/images/acc-square.webp"
-import daddy from "/src/assets/images/godaddy-desktop.webp"
-import sunnyside from "/src/assets/images/sunnyside-desktop.webp"
+import ibgroup from "/src/assets/images/ib-group-desktop.webp";
+import memento from "/src/assets/images/memento-desktop.webp";
+import acc from "/src/assets/images/acc-square.webp";
+import daddy from "/src/assets/images/godaddy-desktop.webp";
+import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 
 export default function Works() {
   return (
-    <div className="mt-20 px-10 mx-auto">
+    <div className="mx-auto mt-20 px-10 overflow-hidden">
       <div className="section-heading px-5">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
@@ -45,41 +45,61 @@ export default function Works() {
         </div>
       </div>
       {/* Make this responsive and dynamically render this instead */}
-      <div className="grid grid-cols-12 gap-y-2 gap-16 mt-10">
-        <div className="col-span-12">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-16 gap-y-10">
+          <div className="col-span-1 md:col-span-12">
             <img src={ibgroup} alt="" />
             <div className="mt-4">
-                <h4 className="uppercase text-works-title text-primary-200 font-medium">IB Group vietnam website</h4>
-                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
+              <h4 className="text-works-title font-medium uppercase text-primary-200">
+                IB Group vietnam website
+              </h4>
+              <p className="text-body-1 font-light text-primary-400">
+                Web Design / Frontend Development
+              </p>
             </div>
+          </div>
+        <div className="col-span-1 md:col-span-7 pt-0 md:pt-16">
+          <img className="" src={memento} alt="" />
+          <div className="mt-4">
+            <h4 className="text-works-title font-medium uppercase text-primary-200">
+              MEMENTO STUDIO LANDING PAGE
+            </h4>
+            <p className="text-body-1 font-light text-primary-400">
+              Web Design / Frontend Development
+            </p>
+          </div>
         </div>
-        <div className="col-span-7 pt-16">
-            <img src={memento} alt="" />
-            <div className="mt-4">
-                <h4 className="uppercase text-works-title text-primary-200 font-medium">MEMENTO STUDIO LANDING PAGE</h4>
-                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
-            </div>
+        <div className="col-span-1 md:col-span-5 pt-0 md:pt-80">
+          <img src={acc} alt="" />
+          <div className="mt-4">
+            <h4 className="text-works-title font-medium uppercase text-primary-200">
+              REAL BUSINESS ACCOUNTANTS
+            </h4>
+            <p className="text-body-1 font-light text-primary-400">
+              Web Design / Frontend Development
+            </p>
+          </div>
         </div>
-        <div className="col-span-5 pt-80">
-            <img src={acc} alt="" />
-            <div className="mt-4">
-                <h4 className="uppercase text-works-title text-primary-200 font-medium">REAL BUSINESS ACCOUNTANTS PROJECT</h4>
-                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
-            </div>
+        <div className="col-span-1 md:col-span-8 h-fit pt-0 md:pt-20">
+          <img src={daddy} alt="" />
+          <div className="mt-4">
+            <h4 className="text-works-title font-medium uppercase text-primary-200">
+              GODADDY LANDING PAGE CLONE
+            </h4>
+            <p className="text-body-1 font-light text-primary-400">
+              Web Design / Frontend Development
+            </p>
+          </div>
         </div>
-        <div className="col-span-8 h-fit pt-20">
-            <img src={daddy} alt="" />
-            <div className="mt-4">
-                <h4 className="uppercase text-works-title text-primary-200 font-medium">GODADDY LANDING PAGE CLONE</h4>
-                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
-            </div>
-        </div>
-        <div className="col-span-4 h-fit">
-            <img src={sunnyside} alt="" />
-            <div className="mt-4">
-                <h4 className="uppercase text-works-title text-primary-200 font-medium">SUNNYSIDE LANDING PAGE</h4>
-                <p className="text-primary-400 font-light text-body-1">Web Design / Frontend Development</p>
-            </div>
+        <div className="col-span-1 md:col-span-4 h-fit">
+          <img src={sunnyside} alt="" />
+          <div className="mt-4">
+            <h4 className="text-works-title font-medium uppercase text-primary-200">
+              SUNNYSIDE LANDING PAGE
+            </h4>
+            <p className="text-body-1 font-light text-primary-400">
+              Web Design / Frontend Development
+            </p>
+          </div>
         </div>
       </div>
     </div>
