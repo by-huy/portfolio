@@ -43,8 +43,7 @@ export default function About() {
       <div className="mt-12 flex w-full flex-col items-start gap-8 sm:flex-row lg:gap-10">
         <div className="top-28 sm:sticky">
           <img
-            className="aspect-square rounded-md object-cover object-center sm:aspect-auto"
-            height="20px"
+            className="aspect-square rounded-md object-cover object-center sm:aspect-auto h-auto w-full"
             src={profileImg}
             alt="portrait image of Huy standing in front of a tree and foliage"
           />

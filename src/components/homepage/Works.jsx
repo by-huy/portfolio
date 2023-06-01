@@ -47,7 +47,7 @@ export default function Works() {
       {/* Make this responsive and dynamically render this instead */}
       <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-16 gap-y-10">
           <div className="col-span-1 md:col-span-12">
-            <img src={ibgroup} alt="" />
+            <img className="h-auto w-full" src={ibgroup} alt="ibgroup website mockup" />
             <div className="mt-4">
               <h3 className="text-works-title font-medium uppercase text-primary-200">
                 IB Group vietnam website
@@ -58,7 +58,7 @@ export default function Works() {
             </div>
           </div>
         <div className="col-span-1 md:col-span-7 pt-0 md:pt-16">
-          <img className="" src={memento} alt="" />
+          <img className="h-auto w-full" src={memento} alt="memento website mockup" />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               MEMENTO STUDIO LANDING PAGE
@@ -69,7 +69,7 @@ export default function Works() {
           </div>
         </div>
         <div className="col-span-1 md:col-span-5 pt-0 md:pt-80">
-          <img src={acc} alt="" />
+          <img className="h-auto w-full" src={acc} alt="real business accountant project mockup" />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               REAL BUSINESS ACCOUNTANTS
@@ -80,7 +80,7 @@ export default function Works() {
           </div>
         </div>
         <div className="col-span-1 md:col-span-8 h-fit pt-0 md:pt-20">
-          <img src={daddy} alt="" />
+          <img className="h-auto w-full" src={daddy} alt="godaddy clone page mockup" />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               GODADDY LANDING PAGE CLONE
@@ -91,7 +91,7 @@ export default function Works() {
           </div>
         </div>
         <div className="col-span-1 md:col-span-4 h-fit">
-          <img src={sunnyside} alt="" />
+          <img className="h-auto w-full" src={sunnyside} alt="sunnyside project mockup" />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               SUNNYSIDE LANDING PAGE
