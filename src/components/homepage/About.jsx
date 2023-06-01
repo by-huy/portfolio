@@ -20,7 +20,7 @@ export default function About() {
               fill="#8C8C73"
             />
           </svg>
-          <h2 className="w-fit text-heading-1 font-medium uppercase text-secondary-600">
+          <h2 className="w-fit text-heading-2 font-medium uppercase text-secondary-600">
             about me
           </h2>
           <svg
