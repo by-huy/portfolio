@@ -23,7 +23,7 @@ export default {
       },
       fontSize: {
         'title': ['clamp(2.75rem, 15vw, 9.5rem)'],
-        'heading-1': ['clamp(2rem, 10.5vw, 6rem)'],
+        'heading-1': ['clamp(3.4rem, 8vw, 5.75rem)'],
         'heading-2': ['clamp(3rem, 10vw, 4.75rem)'],
         'heading-3': ['clamp(2.25rem, 15vw, 2rem)'],
         'special': ['clamp(2.5rem, 5vw, 3.25rem)'],
@@ -33,7 +33,7 @@ export default {
         'body-3': '1rem',
       },
       letterSpacing: {
-        'headings': '-0.05em'
+        'headings': '-0.03em'
       },
       fontFamily: {
         'general': ['GeneralSans-Variable', 'sans-serif'],
