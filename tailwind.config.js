@@ -27,9 +27,9 @@ export default {
         'heading-2': ['clamp(3rem, 10vw, 4.75rem)'],
         'heading-3': ['clamp(2.25rem, 15vw, 2rem)'],
         'special': ['clamp(2.5rem, 5vw, 3.25rem)'],
-        'body-1': ['clamp(1rem, 1vw, 1.5rem)'],
+        'body-1': ['clamp(1.3rem, 1vw, 1.5rem)'],
         'works-title': ['clamp(1.25rem, 2vw, 1.5rem)'],
-        'body-2': ['clamp(1rem, 1vw, 1.5rem)'],
+        'body-2': ['clamp(1rem, 1.5vw, 1.5rem)'],
         'body-3': '1rem',
       },
       letterSpacing: {

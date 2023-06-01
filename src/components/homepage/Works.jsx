@@ -49,10 +49,10 @@ export default function Works() {
           <div className="col-span-1 md:col-span-12">
             <img src={ibgroup} alt="" />
             <div className="mt-4">
-              <h4 className="text-works-title font-medium uppercase text-primary-200">
+              <h3 className="text-works-title font-medium uppercase text-primary-200">
                 IB Group vietnam website
-              </h4>
-              <p className="text-body-1 font-light text-primary-400">
+              </h3>
+              <p className="text-body-2 font-light text-primary-400">
                 Web Design / Frontend Development
               </p>
             </div>
@@ -60,10 +60,10 @@ export default function Works() {
         <div className="col-span-1 md:col-span-7 pt-0 md:pt-16">
           <img className="" src={memento} alt="" />
           <div className="mt-4">
-            <h4 className="text-works-title font-medium uppercase text-primary-200">
+            <h3 className="text-works-title font-medium uppercase text-primary-200">
               MEMENTO STUDIO LANDING PAGE
-            </h4>
-            <p className="text-body-1 font-light text-primary-400">
+            </h3>
+            <p className="text-body-2 font-light text-primary-400">
               Web Design / Frontend Development
             </p>
           </div>
@@ -71,10 +71,10 @@ export default function Works() {
         <div className="col-span-1 md:col-span-5 pt-0 md:pt-80">
           <img src={acc} alt="" />
           <div className="mt-4">
-            <h4 className="text-works-title font-medium uppercase text-primary-200">
+            <h3 className="text-works-title font-medium uppercase text-primary-200">
               REAL BUSINESS ACCOUNTANTS
-            </h4>
-            <p className="text-body-1 font-light text-primary-400">
+            </h3>
+            <p className="text-body-2 font-light text-primary-400">
               Web Design / Frontend Development
             </p>
           </div>
@@ -82,10 +82,10 @@ export default function Works() {
         <div className="col-span-1 md:col-span-8 h-fit pt-0 md:pt-20">
           <img src={daddy} alt="" />
           <div className="mt-4">
-            <h4 className="text-works-title font-medium uppercase text-primary-200">
+            <h3 className="text-works-title font-medium uppercase text-primary-200">
               GODADDY LANDING PAGE CLONE
-            </h4>
-            <p className="text-body-1 font-light text-primary-400">
+            </h3>
+            <p className="text-body-2 font-light text-primary-400">
               Web Design / Frontend Development
             </p>
           </div>
@@ -93,10 +93,10 @@ export default function Works() {
         <div className="col-span-1 md:col-span-4 h-fit">
           <img src={sunnyside} alt="" />
           <div className="mt-4">
-            <h4 className="text-works-title font-medium uppercase text-primary-200">
+            <h3 className="text-works-title font-medium uppercase text-primary-200">
               SUNNYSIDE LANDING PAGE
-            </h4>
-            <p className="text-body-1 font-light text-primary-400">
+            </h3>
+            <p className="text-body-2 font-light text-primary-400">
               Web Design / Frontend Development
             </p>
           </div>
