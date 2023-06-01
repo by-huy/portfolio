@@ -1,7 +1,7 @@
 export default function Services() {
   return (
     <div className="mt-20 select-none">
-      <div className="section-heading px-5">
+      <div className="section-heading">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
             className="scale-75 sm:scale-100"
@@ -40,7 +40,7 @@ export default function Services() {
       </div>
       <div className="space-y-14">
         {/* EXTRACT THIS INTO A COMPONENT */}
-        <div className="mx-10 mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
+        <div className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
           <div className="space-y-6">
             <div className="space-y-3">
               <h3 className="text-heading-3 font-semibold leading-tight">
@@ -68,7 +68,7 @@ export default function Services() {
             <p className="font-general text-special font-extrabold">ReactJS</p>
           </div>
         </div>
-        <div className="mx-10 mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
+        <div className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
           <div className="space-y-6">
             <div className="space-y-3">
               <h3 className="text-heading-3 font-semibold leading-tight">

@@ -2,7 +2,7 @@ import profileImg from "/src/assets/images/profile.webp";
 
 export default function About() {
   return (
-    <div className=" select-none px-10">
+    <div className=" select-none">
       <div className="section-heading">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg

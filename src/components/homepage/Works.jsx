@@ -6,8 +6,8 @@ import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 
 export default function Works() {
   return (
-    <div className="mx-auto mt-20 px-10 overflow-hidden">
-      <div className="section-heading px-5">
+    <div className="mx-auto mt-20 overflow-hidden">
+      <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
             className="scale-75 sm:scale-100"
@@ -25,7 +25,7 @@ export default function Works() {
             />
           </svg>
           <h2 className="w-fit text-center text-heading-2 font-medium uppercase text-secondary-400">
-            Selected works
+            recent work
           </h2>
           <svg
             className="scale-75 sm:scale-100"

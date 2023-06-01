@@ -51,7 +51,7 @@ const App = () => {
   return (
     <div className="bg-secondary-100">
       <NavBar />
-      <main>
+      <main className="px-5 md:px-10">
         <section className="hero">
           <Hero />
         </section>
