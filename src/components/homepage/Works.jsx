@@ -6,7 +6,7 @@ import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 
 export default function Works() {
   return (
-    <div id="works" className="nav-change mx-auto mt-20 overflow-hidden">
+    <section id="works" className="nav-change mx-auto mt-20 overflow-hidden">
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
@@ -102,6 +102,6 @@ export default function Works() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
