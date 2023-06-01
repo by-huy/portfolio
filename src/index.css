@@ -54,7 +54,7 @@
 @layer utilities {
   .title {
     clip-path: polygon(0 0, 200% 0, 100% 102%, 0% 102%);
-    line-height: clamp(5.5rem, 20.5vw, 10rem); /* Set the desired line height */
+    line-height: clamp(6rem, 16vw, 10rem); /* Set the desired line height */
 
   }
 

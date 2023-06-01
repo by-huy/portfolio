@@ -37,8 +37,8 @@ export default function Hero() {
 
   return (
     <div className="relative flex h-screen select-none items-center justify-center">
-      <div className="z-10 flex h-fit flex-col overflow-hidden px-3  text-title font-semibold uppercase text-accent-300">
-        <div className="title h-fit min-w-full ">
+      <div className="z-10 flex flex-col overflow-hidden px-3 text-title font-semibold uppercase text-accent-300">
+        <div className="title">
           {/* Learn more about useRef */}
           <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
             Hey, I&apos;m Huy
