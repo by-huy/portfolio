@@ -9,6 +9,7 @@ import Role from "./components/homepage/Role";
 import About from "./components/homepage/About";
 import Services from "./components/homepage/Services";
 import Works from "./components/homepage/Works";
+import Contact from "./components/homepage/Contact";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -52,21 +53,12 @@ const App = () => {
     <div className="bg-secondary-100">
       <NavBar />
       <main className="px-5 md:px-10">
-        <section className="hero">
-          <Hero />
-        </section>
-        <section id="about" className="nav-change">
-          <Role />
-        </section>
-        <section>
-          <About />
-        </section>
-        <section id="services">
-          <Services />
-        </section>
-        <section id="works" className="nav-change">
-          <Works />
-        </section>
+        <Hero />
+        <Role />
+        <About />
+        <Services />
+        <Works />
+        <Contact />
       </main>
     </div>
   );

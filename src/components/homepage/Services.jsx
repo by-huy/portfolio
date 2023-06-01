@@ -1,6 +1,6 @@
 export default function Services() {
   return (
-    <div className="mt-20 select-none">
+    <section id="services" className="mt-20 select-none">
       <div className="section-heading">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
@@ -100,6 +100,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
