@@ -30,7 +30,7 @@ export default {
         'body-1': ['clamp(1.3rem, 1vw, 1.5rem)'],
         'works-title': ['clamp(1.25rem, 2vw, 1.5rem)'],
         'body-2': ['clamp(1rem, 1.5vw, 1.5rem)'],
-        'body-3': '1rem',
+        'body-3': '1.1rem',
       },
       letterSpacing: {
         'headings': '-0.03em'
