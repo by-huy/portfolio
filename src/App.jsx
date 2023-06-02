@@ -17,9 +17,7 @@ const App = () => {
 
   
   const sectionRefs = useRef([]) // Creating a sectionRefs array
-  useEffect(() => {
-    console.log(sectionRefs.current)
-  }, [])
+
 
   // Scrub animation of section headings
   useEffect(() => {
@@ -57,10 +55,10 @@ const App = () => {
   return (
     <div className="bg-secondary-100">
       <Cursor/>
-      <NavBar sectionRefs={sectionRefs.current}/> 
+      <NavBar sectionRefs={sectionRefs.current}/>  {/* passing sectionRefs props to give access to Navbar, Navbar can then access the props which have access to the array of sectionRef and loop over it */}
       <Hero />
       <main className="px-5 md:px-10">
-        <Role forwardedRef={el => (sectionRefs.current[0] = el)}/> {/* creating  */}
+        <Role forwardedRef={el => (sectionRefs.current[0] = el)}/> {/* forwardedRef props to pass into the child component to access the ref, then this will go into the useRef array  */}
         <About />
         <Services />
         <Works forwardedRef={el => (sectionRefs.current[1] = el)}/>
