@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
-export default function NavBar() {
+export default function NavBar({sectionRefs}) {
   gsap.registerPlugin(ScrollTrigger);
 
   const navBar = useRef(null);
@@ -20,10 +20,9 @@ export default function NavBar() {
       ease: "power4.inOut",
       
     });
+    
 
-    const navChangeSections = document.querySelectorAll('.nav-change')
-
-    navChangeSections.forEach((section) => {
+    sectionRefs.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top 300px",

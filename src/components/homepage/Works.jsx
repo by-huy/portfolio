@@ -4,9 +4,9 @@ import acc from "/src/assets/images/acc-square.webp";
 import daddy from "/src/assets/images/godaddy-desktop.webp";
 import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 
-export default function Works() {
+export default function Works({forwardedRef}) {
   return (
-    <section id="works" className="nav-change mx-auto mt-20 overflow-hidden">
+    <section ref={forwardedRef} id="works" className="nav-change mx-auto mt-20 overflow-hidden">
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg

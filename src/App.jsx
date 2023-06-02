@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Lenis from "@studio-freight/lenis";
 import NavBar from "./components/NavBar";
@@ -14,6 +14,12 @@ import Cursor from "./components/Cursor";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
+
+  
+  const sectionRefs = useRef([]) // Creating a sectionRefs array
+  useEffect(() => {
+    console.log(sectionRefs.current)
+  }, [])
 
   // Scrub animation of section headings
   useEffect(() => {
@@ -51,13 +57,13 @@ const App = () => {
   return (
     <div className="bg-secondary-100">
       <Cursor/>
-      <NavBar />
+      <NavBar sectionRefs={sectionRefs.current}/> 
       <Hero />
       <main className="px-5 md:px-10">
-        <Role />
+        <Role forwardedRef={el => (sectionRefs.current[0] = el)}/> {/* creating  */}
         <About />
         <Services />
-        <Works />
+        <Works forwardedRef={el => (sectionRefs.current[1] = el)}/>
         <Contact />
       </main>
     </div>

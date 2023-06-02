@@ -1,20 +1,26 @@
-export default function Cursor() {
-    let cursor = document.querySelector('.cursor')
+import { useEffect, useState } from 'react';
 
-    document.addEventListener('mousemove', moveCursor);
+export default function Cursor() {
+  const [cursor, setCursor] = useState({x: 0, y: 0})
+
+  useEffect(() => {
+    document.addEventListener('mousemove', moveCursor)
 
     function moveCursor(e) {
-        let x = e.clientX;
-        let y = e.clientY
-
-        console.log(x, y)
-        cursor.style.left = `${x}px`
-        cursor.style.top = `${y}px`
+        setCursor({x: e.clientX, y: e.clientY})
     }
 
-    return (
-        <div className="top-1/2 left-1/2 rounded-full cursor fixed w-3 h-3 bg-secondary-600 z-50 mix-blend-difference -translate-x-1/2 -translate-y-1/2">
+    return () => {
+        document.removeEventListener('mousemove', moveCursor)
+    }
+  }, [])
 
-        </div>
-    )
+  const {x , y} = cursor
+  
+  return (
+    <div
+      className="top-1/2 left-1/2 rounded-full fixed w-3 h-3 bg-secondary-600 z-50 mix-blend-difference -translate-x-1/2 -translate-y-1/2"
+      style={{left: `${x}px`, top:`${y}px`}}
+    ></div>
+  );
 }
