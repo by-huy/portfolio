@@ -10,13 +10,14 @@ import About from "./components/homepage/About";
 import Services from "./components/homepage/Services";
 import Works from "./components/homepage/Works";
 import Contact from "./components/homepage/Contact";
+import Cursor from "./components/Cursor";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Scrub animation of section headings
   useEffect(() => {
     const sectionHeadings = document.querySelectorAll(".section-heading");
-
     sectionHeadings.forEach((heading) => {
       const headings = heading.querySelectorAll(".heading");
 
@@ -40,17 +41,16 @@ const App = () => {
 
   useEffect(() => {
     const lenis = new Lenis();
-
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
   });
 
   return (
     <div className="bg-secondary-100">
+      <Cursor/>
       <NavBar />
       <Hero />
       <main className="px-5 md:px-10">

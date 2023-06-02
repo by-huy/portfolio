@@ -25,10 +25,11 @@
 }
 
 @layer base {
-/* 
+
  * {
-  border: solid 1px red
- } */
+  /* border: solid 1px red */
+  cursor: none
+ }
 
   a,
   p,
