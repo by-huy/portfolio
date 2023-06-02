@@ -70,7 +70,7 @@ export default function NavBar({sectionRefs}) {
         </svg>
       </a>
       <nav className="hidden space-x-7 font-grotesk text-body-3 sm:block">
-        <a href="#about">about</a>
+        <a href="#about" className="hover:underline-offset-1 hover:underline">about</a>
         <a href="#services">services</a>
         <a href="#works">works</a>
         <a

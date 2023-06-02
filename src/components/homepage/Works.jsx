@@ -4,9 +4,15 @@ import acc from "/src/assets/images/acc-square.webp";
 import daddy from "/src/assets/images/godaddy-desktop.webp";
 import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 
-export default function Works({forwardedRef}) {
+export default function Works({ forwardedRef }) {
+  
+
   return (
-    <section ref={forwardedRef} id="works" className="nav-change mx-auto mt-20 overflow-hidden">
+    <section
+      ref={forwardedRef}
+      id="works"
+      className="nav-change mx-auto mt-20 overflow-hidden"
+    >
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
@@ -45,20 +51,28 @@ export default function Works({forwardedRef}) {
         </div>
       </div>
       {/* Make this responsive and dynamically render this instead */}
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-16 gap-y-10">
-          <div className="col-span-1 md:col-span-12">
-            <img className="h-auto w-full" src={ibgroup} alt="ibgroup website mockup" />
-            <div className="mt-4">
-              <h3 className="text-works-title font-medium uppercase text-primary-200">
-                IB Group vietnam website
-              </h3>
-              <p className="text-body-2 font-light text-primary-400">
-                Web Design / Frontend Development
-              </p>
-            </div>
+      <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
+        <div className="col-span-1 md:col-span-12">
+          <img
+            className="img h-auto w-full"
+            src={ibgroup}
+            alt="ibgroup website mockup"
+          />
+          <div className="mt-4">
+            <h3 className="text-works-title font-medium uppercase text-primary-200">
+              IB Group vietnam website
+            </h3>
+            <p className="text-body-2 font-light text-primary-400">
+              Web Design / Frontend Development
+            </p>
           </div>
-        <div className="col-span-1 md:col-span-7 pt-0 md:pt-16">
-          <img className="h-auto w-full" src={memento} alt="memento website mockup" />
+        </div>
+        <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
+          <img
+            className="img h-auto w-full"
+            src={memento}
+            alt="memento website mockup"
+          />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               MEMENTO STUDIO LANDING PAGE
@@ -68,8 +82,12 @@ export default function Works({forwardedRef}) {
             </p>
           </div>
         </div>
-        <div className="col-span-1 md:col-span-5 pt-0 md:pt-80">
-          <img className="h-auto w-full" src={acc} alt="real business accountant project mockup" />
+        <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
+          <img
+            className="img h-auto w-full"
+            src={acc}
+            alt="real business accountant project mockup"
+          />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               REAL BUSINESS ACCOUNTANTS
@@ -79,8 +97,12 @@ export default function Works({forwardedRef}) {
             </p>
           </div>
         </div>
-        <div className="col-span-1 md:col-span-8 h-fit pt-0 md:pt-20">
-          <img className="h-auto w-full" src={daddy} alt="godaddy clone page mockup" />
+        <div className="col-span-1 h-fit pt-0 md:col-span-8 md:pt-20">
+          <img
+            className="img h-auto w-full"
+            src={daddy}
+            alt="godaddy clone page mockup"
+          />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               GODADDY LANDING PAGE CLONE
@@ -90,8 +112,12 @@ export default function Works({forwardedRef}) {
             </p>
           </div>
         </div>
-        <div className="col-span-1 md:col-span-4 h-fit">
-          <img className="h-auto w-full" src={sunnyside} alt="sunnyside project mockup" />
+        <div className="col-span-1 h-fit md:col-span-4">
+          <img
+            className="img h-auto w-full"
+            src={sunnyside}
+            alt="sunnyside project mockup"
+          />
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               SUNNYSIDE LANDING PAGE

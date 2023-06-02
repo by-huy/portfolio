@@ -21,6 +21,7 @@ const App = () => {
 
   // Scrub animation of section headings
   useEffect(() => {
+    //TODO Learn useContext and useRef here
     const sectionHeadings = document.querySelectorAll(".section-heading");
     sectionHeadings.forEach((heading) => {
       const headings = heading.querySelectorAll(".heading");
