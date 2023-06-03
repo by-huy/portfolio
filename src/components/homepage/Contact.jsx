@@ -46,11 +46,10 @@ export default function Contact() {
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
           <form
-            method="post"
+            method="POST"
             name="contact"
             data-netlify="true"
             autoComplete="off"
-            onSubmit="submit"
             className="mt-10 font-grotesk"
           >
             <input
