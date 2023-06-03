@@ -46,9 +46,12 @@ export default function Contact() {
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
           <form
+            method="POST"
+            data-netlify="true"
             autoComplete="off"
-            action="https://api.web3forms.com/submit"
+            onSubmit="submit"
             className="mt-10 font-grotesk"
+            data-netlify-honeypot="bot-field"
           >
             <input
               type="hidden"
