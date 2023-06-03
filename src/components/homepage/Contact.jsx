@@ -1,6 +1,15 @@
 import { Icon } from "@iconify/react";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
+  const [time, setTime] = useState(new Date().toLocaleTimeString())
+
+  useEffect(() => {
+    setInterval(() => {
+      setTime(new Date().toLocaleTimeString())
+    }, 1000)
+  })
+  
   return (
     <section id="contact" className="mt-20 overflow-hidden">
       <div className="section-heading ">
@@ -40,23 +49,18 @@ export default function Contact() {
           </svg>
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-6 gap-20 px-12">
+      <div className="mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12">
         <div className="col-span-4">
-          <h3 className="text-heading-3 font-semibold leading-tight max-w-lg">
+          <h3 className="max-w-lg text-heading-3 font-semibold leading-tight">
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
-          <form
-            method="POST"
-            name="contact"
-            data-netlify="true"
-            autoComplete="off"
-            className="mt-10 font-grotesk"
-          >
+          <form autoComplete="off" className="mt-10 font-grotesk">
             <input
-              name="contact"
               type="hidden"
+              name="access_key"
+              value="YOUR_ACCESS_KEY_HERE"
             />
-            <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
                 <input
                   type="text"
@@ -64,7 +68,7 @@ export default function Contact() {
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 />
-                <label className="text-body-3 absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 text-secondary-600">
+                <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75">
                   Your name
                 </label>
               </div>
@@ -75,18 +79,18 @@ export default function Contact() {
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 />
-                <label className="text-body-3 absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 text-secondary-600">
+                <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75">
                   Your email
                 </label>
               </div>
-              <div className="relative z-0 col-span-2">
+              <div className="relative z-0 sm:col-span-2">
                 <textarea
                   name="message"
                   rows="5"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 ></textarea>
-                <label className="text-body-3 absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 text-secondary-600">
+                <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75">
                   Your message
                 </label>
               </div>
@@ -96,10 +100,10 @@ export default function Contact() {
             </button>
           </form>
         </div>
-        <div className="col-span-2 flex flex-col space-y-12 text-accent-300">
+        <div className="col-span-2 grid grid-cols-2 md:grid-cols-1 text-accent-300 ">
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">Contact Details</h4>
-            <div className="space-y-2 text-body-2 flex flex-col">
+            <div className="flex flex-col space-y-2 text-body-2">
               <a href="mailto:huyng211203@gmail.com">huyng211203@gmail.com</a>
               <a href="tel:+61 435 107 203">+61 435 107 203</a>
             </div>
@@ -107,19 +111,19 @@ export default function Contact() {
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">My Digital Spaces</h4>
             <div className="space-y-2 text-body-2">
-              <a href="" className="flex items-center space-x-2">
+              <a href="https://bento.me/huyng" className="flex items-center space-x-2">
                 <Icon icon="simple-icons:bento" color="#666" />
                 <span>Bento</span>
               </a>
-              <a href="" className="flex items-center space-x-2">
+              <a href="https://github.com/cheesezzzz" className="flex items-center space-x-2">
                 <Icon icon="mdi:github" color="#666" />
                 <span>Github</span>
               </a>
-              <a href="" className="items-cente flex space-x-2">
+              <a href="https://www.linkedin.com/in/huyng03/" className="items-cente flex space-x-2">
                 <Icon icon="mdi:linkedin" color="#666" />
                 <span>LinkedIn</span>
               </a>
-              <a href="" className="flex items-center space-x-2">
+              <a href="https://www.youtube.com/channel/UCBOAB9RV647G93GxLhEXleA" className="flex items-center space-x-2">
                 <Icon icon="mdi:youtube" color="#666" />
                 <span>YouTube</span>
               </a>
@@ -128,7 +132,7 @@ export default function Contact() {
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">Location</h4>
             <div className="space-y-2 text-body-2">
-              <p>Melbourne, Australia. 2:00pm GST10</p>
+              <p>Melbourne, Australia <br></br>{time}</p>
             </div>
           </div>
         </div>
