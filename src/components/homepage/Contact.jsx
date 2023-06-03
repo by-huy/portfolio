@@ -51,7 +51,6 @@ export default function Contact() {
             autoComplete="off"
             onSubmit="submit"
             className="mt-10 font-grotesk"
-            data-netlify-honeypot="bot-field"
           >
             <input
               type="hidden"
