@@ -46,16 +46,16 @@ export default function Contact() {
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
           <form
-            method="POST"
+            method="post"
+            name="contact"
             data-netlify="true"
             autoComplete="off"
             onSubmit="submit"
             className="mt-10 font-grotesk"
           >
             <input
+              name="contact"
               type="hidden"
-              name="access_key"
-              value="YOUR_ACCESS_KEY_HERE"
             />
             <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
