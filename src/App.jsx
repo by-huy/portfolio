@@ -10,6 +10,7 @@ import About from "./components/homepage/About";
 import Services from "./components/homepage/Services";
 import Works from "./components/homepage/Works";
 import Contact from "./components/homepage/Contact";
+import Footer from "./components/homepage/Footer";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -63,6 +64,7 @@ const App = () => {
         <Works forwardedRef={el => (sectionRefs.current[1] = el)}/>
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 };
