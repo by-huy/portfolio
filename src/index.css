@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+}
+
 .text-smooth {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -31,6 +35,7 @@
   /* cursor: none */
  }
 
+
   a,
   p,
   span {
@@ -54,6 +59,9 @@
 }
 
 @layer components {
+  .button {
+    @apply rounded-full bg-accent-300 px-8 py-3 text-secondary-200
+  }
 }
 
 @layer utilities {

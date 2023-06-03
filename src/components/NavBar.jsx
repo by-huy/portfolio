@@ -75,7 +75,7 @@ export default function NavBar({sectionRefs}) {
         <a href="#works">works</a>
         <a
           ref={cta}
-          className="rounded-full bg-accent-300 px-8 py-3 text-secondary-200"
+          className="button"
           href="#contact"
         >
           let&apos;s talk.
