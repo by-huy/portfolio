@@ -2,33 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-}
 
-.text-smooth {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@font-face {
-  font-family: "CabinetGrotesk-Variable";
-  src: url("./assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GeneralSans-Variable";
-  src: url("./assets/fonts/GeneralSans-Variable.ttf") format("truetype");
-  font-weight: 200 700;
-  font-display: swap;
-  font-style: normal;
-}
 
 @layer base {
+  .text-smooth {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  @font-face {
+    font-family: "CabinetGrotesk-Variable";
+    src: url("./assets/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "GeneralSans-Variable";
+    src: url("./assets/fonts/GeneralSans-Variable.ttf") format("truetype");
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
 
  * {
   /* border: solid 1px red */

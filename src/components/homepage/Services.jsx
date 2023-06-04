@@ -19,7 +19,7 @@ export default function Services() {
             />
           </svg>
           <h2 className="w-fit text-center text-heading-2 font-medium uppercase text-secondary-600">
-            Skillsets
+            Services
           </h2>
           <svg
             className="scale-75 sm:scale-100"
@@ -40,6 +40,37 @@ export default function Services() {
       </div>
       <div className="space-y-14">
         {/* EXTRACT THIS INTO A COMPONENT */}
+        <div className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
+          <div className="space-y-6">
+            <div className="space-y-3">
+              <h3 className="text-heading-3 font-semibold leading-tight">
+                my expertises.
+              </h3>
+              <p className="max-w-md text-body-1">
+                I focus on all things digital and web related. With each of my
+                services, my goal is to deliver a functional and elevating
+                digital experience for everyone.
+              </p>
+            </div>
+            <div className="h-1 w-full bg-accent-100 md:hidden"></div>
+          </div>
+
+          <div className="leading-[2.5rem] text-secondary-500 md:leading-[3.4rem]">
+            <p className="font-general text-special font-extrabold">
+              Web Development
+            </p>
+            <p className="font-general text-special font-extrabold">
+              Web Design
+            </p>
+            <p className="font-general text-special font-extrabold">
+              Wireframing
+            </p>
+            <p className="font-general text-special font-extrabold">
+              UI/UX Design
+            </p>
+            <p className="font-general text-special font-extrabold">Branding</p>
+          </div>
+        </div>
         <div className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
           <div className="space-y-6">
             <div className="space-y-3">
@@ -66,37 +97,6 @@ export default function Services() {
               TailwindCSS
             </p>
             <p className="font-general text-special font-extrabold">ReactJS</p>
-          </div>
-        </div>
-        <div className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
-          <div className="space-y-6">
-            <div className="space-y-3">
-              <h3 className="text-heading-3 font-semibold leading-tight">
-                my expertises.
-              </h3>
-              <p className="max-w-md text-body-1">
-                I focus on all things digital and web related. With each of my
-                services, my goal is to deliver an functional and elevating
-                digital experience.
-              </p>
-            </div>
-            <div className="h-1 w-full bg-accent-100 md:hidden"></div>
-          </div>
-
-          <div className="leading-[2.5rem] text-secondary-500 md:leading-[3.4rem]">
-            <p className="font-general text-special font-extrabold">
-              Web Development
-            </p>
-            <p className="font-general text-special font-extrabold">
-              Web Design
-            </p>
-            <p className="font-general text-special font-extrabold">
-              Wireframing
-            </p>
-            <p className="font-general text-special font-extrabold">
-              UI/UX Design
-            </p>
-            <p className="font-general text-special font-extrabold">Branding</p>
           </div>
         </div>
       </div>

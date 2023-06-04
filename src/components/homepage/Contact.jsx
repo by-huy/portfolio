@@ -2,14 +2,14 @@ import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
 
 export default function Contact() {
-  const [time, setTime] = useState(new Date().toLocaleTimeString())
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
     setInterval(() => {
-      setTime(new Date().toLocaleTimeString())
-    }, 1000)
-  })
-  
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+  });
+
   return (
     <section id="contact" className="mt-20 overflow-hidden">
       <div className="section-heading ">
@@ -63,7 +63,10 @@ export default function Contact() {
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 />
-                <label htmlFor="name" className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75">
+                <label
+                  htmlFor="name"
+                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+                >
                   Your name
                 </label>
               </div>
@@ -74,7 +77,10 @@ export default function Contact() {
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 />
-                <label htmlFor="email" className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75">
+                <label
+                  htmlFor="email"
+                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+                >
                   Your email
                 </label>
               </div>
@@ -85,7 +91,10 @@ export default function Contact() {
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 ></textarea>
-                <label htmlFor="message" className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75">
+                <label
+                  htmlFor="message"
+                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+                >
                   Your message
                 </label>
               </div>
@@ -95,39 +104,72 @@ export default function Contact() {
             </button>
           </form>
         </div>
-        <div className="col-span-2 grid grid-cols-2 md:grid-cols-1 text-accent-300 ">
+        <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 text-accent-300 md:grid-cols-1 gap-x-4 gap-y-8 sm:gap-y-0">
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">Contact Details</h4>
-            <div className="flex flex-col space-y-2 text-body-2">
-              <a href="mailto:huyng211203@gmail.com">huyng211203@gmail.com</a>
-              <a href="tel:+61 435 107 203">+61 435 107 203</a>
+            <div className="flex flex-col space-y-3 text-body-2">
+              <a href="mailto:huyng211203@gmail.com" className="relative group w-fit">
+                <span>huyng211203@gmail.com</span>
+                <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+              </a>
+              <a href="tel:+61 435 107 203" className="relative group w-fit">
+                <span>+61 435 107 203</span>
+                <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+              </a>
             </div>
           </div>
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">My Digital Spaces</h4>
-            <div className="space-y-2 text-body-2">
-              <a href="https://bento.me/huyng" className="flex items-center space-x-2">
+            <div className="space-y-3 text-body-2">
+              <a
+                href="https://bento.me/huyng"
+                className="group flex items-center space-x-2"
+              >
                 <Icon icon="simple-icons:bento" color="#666" />
-                <span>Bento</span>
+                <div className="relative">
+                  <span>Bento</span>
+                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </div>
               </a>
-              <a href="https://github.com/cheesezzzz" className="flex items-center space-x-2">
+              <a
+                href="https://github.com/cheesezzzz"
+                className="group flex items-center space-x-2"
+              >
                 <Icon icon="mdi:github" color="#666" />
-                <span>Github</span>
+                <div className="relative">
+                  <span>Github</span>
+                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </div>
               </a>
-              <a href="https://www.linkedin.com/in/huyng03/" className="items-cente flex space-x-2">
+              <a
+                href="https://www.linkedin.com/in/huyng03/"
+                className="group group flex w-fit items-center space-x-2"
+              >
                 <Icon icon="mdi:linkedin" color="#666" />
-                <span>LinkedIn</span>
+                <div className="relative">
+                  <span>LinkedIn</span>
+                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </div>
               </a>
-              <a href="https://www.youtube.com/channel/UCBOAB9RV647G93GxLhEXleA" className="flex items-center space-x-2">
+              <a
+                href="https://www.youtube.com/channel/UCBOAB9RV647G93GxLhEXleA"
+                className="group flex items-center space-x-2"
+              >
                 <Icon icon="mdi:youtube" color="#666" />
-                <span>YouTube</span>
+                <div className="relative">
+                  <span>YouTube</span>
+                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </div>
               </a>
             </div>
           </div>
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">Location</h4>
             <div className="space-y-2 text-body-2">
-              <p>Melbourne, Australia <br></br>{time}</p>
+              <p>
+                Melbourne, Australia <br></br>
+                {time}
+              </p>
             </div>
           </div>
         </div>

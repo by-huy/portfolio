@@ -5,8 +5,6 @@ import daddy from "/src/assets/images/godaddy-desktop.webp";
 import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 
 export default function Works({ forwardedRef }) {
-  
-
   return (
     <section
       ref={forwardedRef}
@@ -52,12 +50,18 @@ export default function Works({ forwardedRef }) {
       </div>
       {/* Make this responsive and dynamically render this instead */}
       <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
-        <div className="col-span-1 md:col-span-12">
-          <img
-            className="img h-auto w-full"
-            src={ibgroup}
-            alt="ibgroup website mockup"
-          />
+        {/* Project #1 */}
+        <div className=" col-span-1 md:col-span-12">
+          <a
+            href="https://musical-stroopwafel-1c2327.netlify.app/landing.html"
+            className="group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear"
+          >
+            <img
+              className="img h-auto w-full duration-700 ease-in-out group-hover:scale-105"
+              src={ibgroup}
+              alt="ibgroup website mockup"
+            />
+          </a>
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               IB Group vietnam website
@@ -67,12 +71,18 @@ export default function Works({ forwardedRef }) {
             </p>
           </div>
         </div>
+        {/* Project #2 */}
         <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
-          <img
-            className="img h-auto w-full"
-            src={memento}
-            alt="memento website mockup"
-          />
+          <a
+            href="https://mementostudio.netlify.app/"
+            className="group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear"
+          >
+            <img
+              className="img h-auto w-full duration-700 ease-in-out group-hover:scale-105"
+              src={memento}
+              alt="memento website mockup"
+            />
+          </a>
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               MEMENTO STUDIO LANDING PAGE
@@ -83,11 +93,13 @@ export default function Works({ forwardedRef }) {
           </div>
         </div>
         <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
-          <img
-            className="img h-auto w-full"
-            src={acc}
-            alt="real business accountant project mockup"
-          />
+          <a href="https://realbusinessaccountants.netlify.app" className="group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
+            <img
+              className="img h-auto w-full duration-700 ease-in-out group-hover:scale-105"
+              src={acc}
+              alt="real business accountant project mockup"
+            />
+          </a>
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               REAL BUSINESS ACCOUNTANTS
@@ -98,11 +110,13 @@ export default function Works({ forwardedRef }) {
           </div>
         </div>
         <div className="col-span-1 h-fit pt-0 md:col-span-8 md:pt-20">
-          <img
-            className="img h-auto w-full"
-            src={daddy}
-            alt="godaddy clone page mockup"
-          />
+          <a href="https://godaddyuiclone.netlify.app" className="group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
+            <img
+              className="img h-auto w-full duration-700 ease-in-out group-hover:scale-105"
+              src={daddy}
+              alt="godaddy clone page mockup"
+            />
+          </a>
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               GODADDY LANDING PAGE CLONE
@@ -113,11 +127,13 @@ export default function Works({ forwardedRef }) {
           </div>
         </div>
         <div className="col-span-1 h-fit md:col-span-4">
-          <img
-            className="img h-auto w-full"
-            src={sunnyside}
-            alt="sunnyside project mockup"
-          />
+          <a href="https://sunnysidechallenge.netlify.app" className="group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
+            <img
+              className="img h-auto w-full duration-700 ease-in-out group-hover:scale-105"
+              src={sunnyside}
+              alt="sunnyside project mockup"
+            />
+          </a>
           <div className="mt-4">
             <h3 className="text-works-title font-medium uppercase text-primary-200">
               SUNNYSIDE LANDING PAGE

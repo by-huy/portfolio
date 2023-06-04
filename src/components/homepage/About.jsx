@@ -54,7 +54,7 @@ export default function About() {
               A brief intro, who am I?
             </h3>
             <p className="text-body-1">
-              I am a self-taught frontend developer, web designer, and UI/UX
+              I am a self-taught creative frontend developer, web designer, and UI/UX
               designer based in Melbourne, Australia. I am passionate in
               catering my works for emerging start ups and small businesses that
               inspire and connect with people 😎.
