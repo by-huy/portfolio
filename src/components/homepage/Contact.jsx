@@ -108,8 +108,8 @@ export default function Contact() {
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">Contact Details</h4>
             <div className="flex flex-col space-y-3 text-body-2">
-              <a href="mailto:huyng211203@gmail.com" className="relative group w-fit">
-                <span>huyng211203@gmail.com</span>
+              <a href="mailto:hello@huyng.xyz" className="relative group w-fit">
+                <span>hello@huyng.xyz</span>
                 <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
               <a href="tel:+61 435 107 203" className="relative group w-fit">
