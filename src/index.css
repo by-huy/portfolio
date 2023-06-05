@@ -28,11 +28,14 @@
   }
 
  * {
-  /* border: solid 1px red */
-  cursor: none
+  cursor: auto
  }
 
-
+ @media (min-width: 640px) {
+  * {
+    cursor: none !important;
+  }
+}
   a,
   p,
   span {
@@ -57,7 +60,7 @@
 
 @layer components {
   .button {
-    @apply rounded-full bg-accent-300 px-8 py-3 text-secondary-200
+    @apply  bg-accent-300 px-8 py-3 text-secondary-200
   }
 }
 
