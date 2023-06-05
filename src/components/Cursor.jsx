@@ -12,7 +12,6 @@ export default function Cursor() {
     // TODO Learn useContext and useRef here
   const images = document.querySelectorAll('.img')
     
-    console.log(svg)
     const tl = gsap.timeline({paused: true})
 
     tl.to(curs.current, { scale: 8, ease: "expo.out" }).to(svg.current, { opacity: 1,}, 0);
@@ -50,7 +49,7 @@ export default function Cursor() {
   return (
     <div
       ref={curs}
-      className="cursor pointer-events-none fixed left-1/2 top-1/2 z-[999] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary-600 flex justify-center items-center mix-blend-difference"
+      className="cursor pointer-events-none fixed left-1/2 top-1/2 z-[999] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary-600 flex justify-center items-center"
       style={{ left: `${x}px`, top: `${y}px` }}
     >
       <svg ref={svg} xmlns="http://www.w3.org/2000/svg" className="scale-50 opacity-0" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 19L19 6m0 0v12.48M19 6H6.52"/></svg>
