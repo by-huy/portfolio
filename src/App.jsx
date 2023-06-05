@@ -11,6 +11,7 @@ import Services from "./components/homepage/Services";
 import Works from "./components/homepage/Works";
 import Contact from "./components/homepage/Contact";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -55,6 +56,7 @@ const App = () => {
 
   return (
     <div className="bg-secondary-100 bg">
+      <Cursor />
       <NavBar sectionRefs={sectionRefs.current}/>  {/* passing sectionRefs props to give access to Navbar, Navbar can then access the props which have access to the array of sectionRef and loop over it */}
       <Hero />
       <main className="px-5 md:px-10">
