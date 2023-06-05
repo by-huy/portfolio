@@ -14,10 +14,10 @@ export default function Contact() {
     <section id="contact" className="mt-20 overflow-hidden">
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
-          <svg
-            className="scale-75 sm:scale-100"
-            width="32"
-            height="16"
+        <svg
+            className="scale-90 sm:scale-125"
+            width="20"
+            height="20"
             viewBox="0 0 32 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -33,9 +33,9 @@ export default function Contact() {
             Contact me
           </h2>
           <svg
-            className="scale-75 sm:scale-100"
-            width="32"
-            height="16"
+            className="scale-90 sm:scale-125"
+            width="20"
+            height="20"
             viewBox="0 0 32 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +54,7 @@ export default function Contact() {
           <h3 className="max-w-lg text-heading-3 font-semibold leading-tight">
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
+          <p className="mt-4 text-body-2 text-accent-100 max-w-md">I am looking for freelance opportunities or internships in startups, agencies, and design studios.</p>
           <form autoComplete="off" className="mt-10 font-grotesk">
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">

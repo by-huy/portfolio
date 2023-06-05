@@ -2,13 +2,13 @@ import profileImg from "/src/assets/images/profile.webp";
 
 export default function About() {
   return (
-    <section  className=" select-none ">
+    <section className=" select-none ">
       <div className="section-heading">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
-          <svg
-            className="scale-75 sm:scale-100"
-            width="32"
-            height="16"
+        <svg
+            className="scale-90 sm:scale-125"
+            width="20"
+            height="20"
             viewBox="0 0 32 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@ export default function About() {
             about me
           </h2>
           <svg
-            className="scale-75 sm:scale-100"
-            width="32"
-            height="16"
+            className="scale-90 sm:scale-125"
+            width="20"
+            height="20"
             viewBox="0 0 32 16"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function About() {
       <div className="mt-12 flex w-full flex-col items-start gap-8 sm:flex-row lg:gap-10">
         <div className="top-28 sm:sticky">
           <img
-            className="aspect-square rounded-md object-cover object-center sm:aspect-auto h-auto w-full"
+            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto"
             src={profileImg}
             alt="portrait image of Huy standing in front of a tree and foliage"
           />
@@ -54,8 +54,8 @@ export default function About() {
               A brief intro, who am I?
             </h3>
             <p className="text-body-1">
-              I am a self-taught creative frontend developer, web designer, and UI/UX
-              designer based in Melbourne, Australia. I am passionate in
+              I am a self-taught creative frontend developer, web designer, and
+              UI/UX designer based in Melbourne, Australia. I am passionate in
               catering my works for emerging start ups and small businesses that
               inspire and connect with people 😎.
               <br></br>

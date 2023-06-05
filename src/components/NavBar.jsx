@@ -73,8 +73,13 @@ export default function NavBar({ sectionRefs }) {
           <span>projects</span>
           <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
-        <a ref={cta} className="button" href="#contact">
-          let&apos;s talk.
+        <a
+          ref={cta}
+          className="button group relative"
+          href="#contact"
+        >
+          <div className="bg-secondary-300 absolute bottom-0 inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-full overflow-hidden"></div>
+          <span className="relative text-black group-hover:text-accent-400 w-fit">Let&apos;s Talk.</span>
         </a>
       </nav>
       <button
