@@ -5,6 +5,8 @@ import daddy from "/src/assets/images/godaddy-desktop.webp";
 import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 
 export default function Works({ forwardedRef }) {
+  
+
   return (
     <section
       ref={forwardedRef}
@@ -48,8 +50,8 @@ export default function Works({ forwardedRef }) {
           </svg>
         </div>
       </div>
-      {/* Make this responsive and dynamically render this instead */}
       <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
+        {/* TODO: Dynamically render this instead */}
         {/* Project #1 */}
         <div className=" col-span-1 md:col-span-12">
           <a

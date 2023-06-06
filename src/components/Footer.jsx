@@ -16,13 +16,13 @@ export default function Footer() {
           <span></span>
         </div>
       </div>
-      <button onClick={toTop} className="col-span-2 flex items-center space-x-2 w-fit">
-        <span className="font-extrabold uppercase">BACK TO TOP</span>
-        <span>
+      <button onClick={toTop} className="col-span-2 flex items-center space-x-2 w-fit group">
+        <span className="font-extrabold uppercase hover:font-black duration-200">BACK TO TOP</span>
+        <span className="group-hover:-translate-y-3 duration-300 ease-in-out">
           <svg
             className="-rotate-90"
-            width="20"
-            height="20"
+            width="24"
+            height="24"
             viewBox="0 0 200 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

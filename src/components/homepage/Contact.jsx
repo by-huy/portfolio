@@ -14,7 +14,7 @@ export default function Contact() {
     <section id="contact" className="mt-20 overflow-hidden">
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
-        <svg
+          <svg
             className="scale-90 sm:scale-125"
             width="20"
             height="20"
@@ -54,7 +54,10 @@ export default function Contact() {
           <h3 className="max-w-lg text-heading-3 font-semibold leading-tight">
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
-          <p className="mt-4 text-body-2 text-accent-100 max-w-md">I am looking for freelance opportunities or internships in startups, agencies, and design studios.</p>
+          <p className="mt-4 max-w-md text-body-2 text-accent-100">
+            I am looking for freelance opportunities or internships in startups,
+            agencies, and design studios.
+          </p>
           <form autoComplete="off" className="mt-10 font-grotesk">
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
@@ -100,20 +103,23 @@ export default function Contact() {
                 </label>
               </div>
             </div>
-            <button type="submit" className="button mt-10">
-              Send Message
+            <button type="submit" className="button group mt-10 hover:bg-transparent hover:border-accent-400 border duration-200">
+              <span className="relative">
+                <span className="absolute bottom-2 h-1 w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
+                <span className="group-hover:text-accent-400">Send Message</span>
+              </span>
             </button>
           </form>
         </div>
-        <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 text-accent-300 md:grid-cols-1 gap-x-4 gap-y-8 sm:gap-y-0">
+        <div className="col-span-2 grid grid-cols-1 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1">
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">Contact Details</h4>
             <div className="flex flex-col space-y-3 text-body-2">
-              <a href="mailto:hello@huyng.xyz" className="relative group w-fit">
+              <a href="mailto:hello@huyng.xyz" className="group relative w-fit">
                 <span>hello@huyng.xyz</span>
                 <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
-              <a href="tel:+61 435 107 203" className="relative group w-fit">
+              <a href="tel:+61 435 107 203" className="group relative w-fit">
                 <span>+61 435 107 203</span>
                 <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>

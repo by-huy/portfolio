@@ -1,38 +1,37 @@
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
-
 export default function Cursor() {
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
-  const curs = useRef(null)
-  const svg = useRef(null)
-  
+  const curs = useRef(null);
+  const svg = useRef(null);
+
   useEffect(() => {
     // TODO Learn useContext and useRef here
-  const images = document.querySelectorAll('.img')
-    
-    const tl = gsap.timeline({paused: true})
+    const images = document.querySelectorAll(".img");
 
-    tl.to(curs.current, { scale: 8, ease: "expo.out" }).to(svg.current, { opacity: 1,}, 0);
+    const tl = gsap.timeline({ paused: true });
 
+    tl.to(curs.current, { scale: 10, ease: "expo.out" }).to(
+      svg.current,
+      { opacity: 1 },
+      0
+    );
 
     images.forEach((img) => {
-      img.addEventListener('mouseenter', function() {
-        tl.play()
-      })
+      img.addEventListener("mouseenter", function () {
+        tl.play();
+      });
 
-      img.addEventListener('mouseleave', function() {
-        tl.reverse()
-        tl.eventCallback('onReverseComplete', function () {
+      img.addEventListener("mouseleave", function () {
+        tl.reverse();
+        tl.eventCallback("onReverseComplete", function () {
           gsap.set(svg.current, { opacity: 0 }); // Hide the SVG element
           gsap.set(curs.current, { scale: 1 }); // Hide the SVG element
         });
-      })
+      });
+    });
 
-      
-    })
-
-  
     function moveCursor(e) {
       setCursor({ x: e.clientX, y: e.clientY });
     }
@@ -48,10 +47,26 @@ export default function Cursor() {
   return (
     <div
       ref={curs}
-      className="cursor pointer-events-none fixed mix-blend-exclusion left-1/2 top-1/2 z-[999] h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary-600 hidden sm:flex justify-center items-center"
+      className="cursor pointer-events-none fixed left-1/2 top-1/2 z-[999] hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-secondary-600 sm:flex"
       style={{ left: `${x}px`, top: `${y}px` }}
     >
-      <svg ref={svg} xmlns="http://www.w3.org/2000/svg" className="scale-50 opacity-0" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 19L19 6m0 0v12.48M19 6H6.52"/></svg>
+      <svg
+        ref={svg}
+        xmlns="http://www.w3.org/2000/svg"
+        className="scale-50 opacity-0"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          d="M6 19L19 6m0 0v12.48M19 6H6.52"
+        />
+      </svg>
     </div>
   );
 }
