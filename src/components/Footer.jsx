@@ -1,4 +1,8 @@
 export default function Footer() {
+  function toTop() {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div className="mt-14 flex items-end justify-between px-5 py-4 sm:flex">
       <div className="flex flex-col md:flex-row md:w-[62.5vw] lg:w-[57.5vw] justify-between">
@@ -12,7 +16,7 @@ export default function Footer() {
           <span></span>
         </div>
       </div>
-      <button className="col-span-2 flex items-center space-x-2 w-fit">
+      <button onClick={toTop} className="col-span-2 flex items-center space-x-2 w-fit">
         <span className="font-extrabold uppercase">BACK TO TOP</span>
         <span>
           <svg

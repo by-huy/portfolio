@@ -52,10 +52,10 @@ export default function Services() {
                 digital experience for everyone.
               </p>
             </div>
-            <div className="h-1 w-full bg-accent-100 md:hidden"></div>
+            <div className="h-1 w-full opacity-50 bg-accent-100 md:hidden"></div>
           </div>
 
-          <div className="leading-[2.5rem] text-secondary-500 md:leading-[3.4rem]">
+          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem]">
             <p className="font-general text-special font-extrabold">
               Web Development
             </p>
@@ -83,9 +83,9 @@ export default function Services() {
                 technologies that could expand my horizons.
               </p>
             </div>
-            <div className="h-1 w-full bg-accent-100 md:hidden"></div>
+            <div className="h-1 w-full opacity-50 bg-accent-100 md:hidden"></div>
           </div>
-          <div className="leading-[2.5rem] text-secondary-500 md:leading-[3.4rem]">
+          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem]">
             <p className="font-general text-special font-extrabold">
               JavaScript
             </p>

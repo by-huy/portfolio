@@ -31,7 +31,7 @@ export default function NavBar({ sectionRefs }) {
           .to(hamburger.current, { backgroundColor: "#DDDDD5" }, 0)
           // this animation targets every elements with the class of .bg-secondary-100
           .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0)
-          .to(cta.current, { backgroundColor: "#8C8C73" }, 0),
+          .to(cta.current, { backgroundColor: "#D1D1C7", color: '#0E0E0C' }, 0),
         toggleActions: "restart reverse restart reverse",
       });
     });
@@ -75,11 +75,10 @@ export default function NavBar({ sectionRefs }) {
         </a>
         <a
           ref={cta}
-          className="button group relative"
+          className="button "
           href="#contact"
         >
-          <div className="bg-secondary-300 absolute bottom-0 inset-0 w-0 transition-all duration-[250ms] ease-out group-hover:w-full overflow-hidden"></div>
-          <span className="relative text-black group-hover:text-accent-400 w-fit">Let&apos;s Talk.</span>
+          <span className="relative w-fit">Let&apos;s Talk.</span>
         </a>
       </nav>
       <button
@@ -89,7 +88,7 @@ export default function NavBar({ sectionRefs }) {
         <span
           ref={(el) => (hamburger.current[0] = el)}
           className="line-1 hamburger-0 absolute h-[0.16rem] w-9 -translate-y-1 rounded-full bg-accent-400 transition-transform duration-200"
-        ></span>
+          ></span>
         <span
           ref={(el) => (hamburger.current[1] = el)}
           className="hamburger absolute h-[0.16rem] w-9 translate-y-1 rounded-full bg-accent-400 transition-transform duration-200"

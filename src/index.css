@@ -60,7 +60,7 @@
 
 @layer components {
   .button {
-    @apply  bg-accent-300 px-8 py-3 text-secondary-200
+    @apply  bg-accent-300 px-8 py-3 text-secondary-200 rounded-full hover:rounded-tl-sm hover:rounded-br-sm duration-300 ease-in-out
   }
 }
 

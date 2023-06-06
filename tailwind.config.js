@@ -9,10 +9,10 @@ export default {
       'title': ['clamp(3.75rem, 14vw, 8.75rem)'],
       'heading-1': ['clamp(3.4rem, 8vw, 5.66rem)'],
       'heading-2': ['clamp(2.8rem, 8vw, 5.66rem)'],
-      'heading-3': ['clamp(2.3rem, 5vw, 2.75rem)'], //TODO
-      'special': ['clamp(2.5rem, 5vw, 3.25rem)'],
+      'heading-3': ['clamp(2.1rem, 5vw, 2.75rem)'], //TODO
+      'special': ['clamp(2rem, 4vw, 3.25rem)'],
       'works-title': ['clamp(1.25rem, 2vw, 1.5rem)'],
-      'body-1': ['clamp(1.2rem, 2vw, 1.3rem)'], //TODO
+      'body-1': ['clamp(1.1rem, 2vw, 1.3rem)'], //TODO
       'body-2': ['clamp(1rem, 1.5vw, 1.5rem)'],
       'body-3': '1.1rem',
     },
