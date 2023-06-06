@@ -24,7 +24,7 @@ export default function NavBar({ sectionRefs }) {
         trigger: section,
         start: "top 375px",
         end: "bottom 300px",
-        markers: true,
+        // markers: true,
         animation: gsap
           .timeline()
           // this animation targets every elements with the class of .bg-secondary-100
