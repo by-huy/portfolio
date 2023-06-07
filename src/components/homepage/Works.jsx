@@ -60,6 +60,7 @@ export default function Works({ forwardedRef }) {
             className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear"
           >
             <img
+              loading="lazy"
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={ibgroup}
               alt="ibgroup website mockup"
@@ -81,6 +82,7 @@ export default function Works({ forwardedRef }) {
             className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear"
           >
             <img
+              loading="lazy"
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={memento}
               alt="memento website mockup"
@@ -98,6 +100,7 @@ export default function Works({ forwardedRef }) {
         <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
           <a href="https://realbusinessaccountants.netlify.app" className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
             <img
+              loading="lazy"
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={acc}
               alt="real business accountant project mockup"
@@ -115,6 +118,7 @@ export default function Works({ forwardedRef }) {
         <div className="col-span-1 h-fit pt-0 md:col-span-8 md:pt-20">
           <a href="https://godaddyuiclone.netlify.app" className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
             <img
+              loading="lazy"
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={daddy}
               alt="godaddy clone page mockup"
@@ -132,6 +136,7 @@ export default function Works({ forwardedRef }) {
         <div className="col-span-1 h-fit md:col-span-4">
           <a href="https://sunnysidechallenge.netlify.app" className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
             <img
+              loading="lazy"
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={sunnyside}
               alt="sunnyside project mockup"
