@@ -1,4 +1,4 @@
-import { useEffect, useRef} from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
 
@@ -7,12 +7,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function NavBar({ sectionRefs }) {
   const navBar = useRef(null);
   const logo = useRef(null);
-  const hamburger = useRef([]);
   const cta = useRef(null);
   const tl = gsap.timeline();
   gsap.registerPlugin(ScrollTrigger);
-
-
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -30,24 +27,25 @@ export default function NavBar({ sectionRefs }) {
       delay: 0.5,
       ease: "power4.inOut",
     });
+  });
 
+  useEffect(() => {
     sectionRefs.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top 375px",
         end: "bottom 300px",
-        // markers: true,
+        markers: true,
         animation: gsap
           .timeline()
           .to(navBar.current, { color: "#DDDDD5" })
-          .to(hamburger.current, { backgroundColor: "#DDDDD5" }, 0)
           .to(cta.current, { backgroundColor: "#D1D1C7", color: "#0E0E0C" }, 0)
           .to(".bg-secondary-100", { backgroundColor: "#0E0E0C" }, 0),
 
         toggleActions: "restart reverse restart reverse",
       });
     });
-    ScrollTrigger.refresh()
+    ScrollTrigger.refresh();
   });
 
   return (
@@ -97,7 +95,6 @@ export default function NavBar({ sectionRefs }) {
           </span>
         </a>
       </nav>
-      
     </header>
   );
 }

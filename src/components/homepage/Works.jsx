@@ -11,7 +11,7 @@ export default function Works({ forwardedRef }) {
     <section
       ref={forwardedRef}
       id="works"
-      className="mx-auto mt-20 overflow-hidden"
+      className="nav-change overflow-hidden"
     >
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
