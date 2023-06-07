@@ -52,7 +52,6 @@ export default function Works({ forwardedRef }) {
         </div>
       </div>
       <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
-        {/* TODO: Dynamically render this instead */}
         {/* Project #1 */}
         <div className=" col-span-1 md:col-span-12">
           <a
