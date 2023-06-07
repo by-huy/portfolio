@@ -71,12 +71,10 @@ export default function Contact() {
             autoComplete="off"
             method="POST"
             // eslint-disable-next-line react/no-unknown-property
-            netlify-honeypot="bot-field"
             className="mt-10 font-grotesk"
             // eslint-disable-next-line react/no-unknown-property
             netlify
           >
-            <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
                 <input
