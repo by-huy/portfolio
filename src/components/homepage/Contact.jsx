@@ -67,7 +67,6 @@ export default function Contact() {
             agencies, and design studios.
           </p>
           <form
-            onSubmit={handleSubmit}
             name="contact"
             autoComplete="off"
             method="POST"
