@@ -1,16 +1,47 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import Lenis from "@studio-freight/lenis";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function NavBar({ sectionRefs }) {
-  gsap.registerPlugin(ScrollTrigger);
-
   const navBar = useRef(null);
   const logo = useRef(null);
   const hamburger = useRef([]);
-  const tl = gsap.timeline();
   const cta = useRef(null);
+  const overlay = useRef(null)
+  const tl = gsap.timeline();
+  const tl2 = gsap.timeline()
 
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  console.log(menuOpen)
+
+  function openOverlay() {
+    setMenuOpen((menu) => !menu)
+  }
+  tl2.to(overlay.current, {x: 200, duration: 2, ease:"power4.inOut"})
+
+  if(menuOpen) {
+    tl2.play()
+  } else if(!menuOpen) {
+    tl2.reverse()
+  }
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+
+  });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+ 
   useEffect(() => {
     tl.to(navBar.current, {
       y: 0,
@@ -44,7 +75,7 @@ export default function NavBar({ sectionRefs }) {
       className="fixed top-0 z-50 flex w-full -translate-y-full items-center justify-between bg-secondary-100 px-5 py-3"
     >
       {/* logo */}
-      <a href=".">
+      <a href="." className="z-50">
         <svg
           ref={logo}
           width="80"
@@ -87,7 +118,8 @@ export default function NavBar({ sectionRefs }) {
       </nav>
       <button
         id="hamburger-btn"
-        className="relative flex h-7 w-10 cursor-pointer items-center space-y-1 transition duration-500 ease-in-out sm:hidden"
+        onClick={openOverlay}
+        className="relative flex h-7 w-10 cursor-pointer items-center space-y-1 transition duration-500 ease-in-out sm:hidden z-50"
       >
         <span
           ref={(el) => (hamburger.current[0] = el)}
@@ -98,6 +130,33 @@ export default function NavBar({ sectionRefs }) {
           className="hamburger absolute h-[0.16rem] w-9 translate-y-1 rounded-full bg-accent-400 transition-transform duration-200"
         ></span>
       </button>
+      {/* Menu Overlay for Mobile */}
+      <div ref={overlay} className="fixed left-0 top-0 translate-x-full flex h-screen bg-secondary-100 transition-all w-screen">
+      <nav className="hidden space-x-7 font-grotesk text-body-3 sm:block">
+        <a href="#about" className="group relative">
+          <span>about</span>
+          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="#services" className="group relative">
+          <span>services</span>
+          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a href="#works" className="group relative">
+          <span>projects</span>
+          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+        </a>
+        <a
+          ref={cta}
+          className="button group relative hover:bg-transparent"
+          href="#contact"
+        >
+          <span className="relative w-fit">
+            <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
+            <span>Let&apos;s Talk.</span>
+          </span>
+        </a>
+      </nav>
+      </div>
     </header>
   );
 }

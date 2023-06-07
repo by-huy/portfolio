@@ -1,6 +1,6 @@
 export default function Services() {
   return (
-    <section id="services" className="mt-20 select-none">
+    <section id="services" className="mt-20 select-none" aria-label="services">
       <div className="section-heading">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg

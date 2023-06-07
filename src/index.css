@@ -28,7 +28,9 @@
   }
 
  * {
-  cursor: auto
+  cursor: auto;
+  border: 1px solid red
+
  }
 
  @media (min-width: 640px) {

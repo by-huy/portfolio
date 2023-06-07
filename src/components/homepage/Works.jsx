@@ -12,6 +12,7 @@ export default function Works({ forwardedRef }) {
       ref={forwardedRef}
       id="works"
       className="nav-change mx-auto mt-20 overflow-hidden"
+      aria-label="recent works"
     >
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">

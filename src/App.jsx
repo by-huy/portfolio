@@ -1,16 +1,16 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Lenis from "@studio-freight/lenis";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/ui/NavBar";
 import Hero from "./components/homepage/Hero";
 import Role from "./components/homepage/Role";
 import About from "./components/homepage/About";
 import Services from "./components/homepage/Services";
 import Works from "./components/homepage/Works";
 import Contact from "./components/homepage/Contact";
-import Footer from "./components/Footer";
+import Footer from "./components/ui/Footer";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -28,28 +28,21 @@ const App = () => {
         ScrollTrigger.create({
           trigger: individualHeading,
           start: "top 550px",
-          end: "bottom 100px",
-          scrub: true,
+          end: "bottom 550px",
           animation: gsap.to(individualHeading, {
             opacity: 1,
             y: 0,
             ease: "power4.out",
-            duration: 2,
+            duration: 1,
           }),
-          toggleActions: "none none none none",
+          toggleActions: "play none none none",
+
         });
       });
     });
   }, []);
 
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  });
+  
 
   return (
     <div className="bg bg-secondary-100">

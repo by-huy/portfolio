@@ -11,7 +11,7 @@ export default function Contact() {
   });
 
   return (
-    <section id="contact" className="mt-20 overflow-hidden">
+    <section id="contact" className="mt-20 overflow-hidden" aria-label="contact me">
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
