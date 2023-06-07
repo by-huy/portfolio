@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef} from "react";
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
 
@@ -9,24 +9,10 @@ export default function NavBar({ sectionRefs }) {
   const logo = useRef(null);
   const hamburger = useRef([]);
   const cta = useRef(null);
-  const overlay = useRef(null)
   const tl = gsap.timeline();
-  const tl2 = gsap.timeline()
+  gsap.registerPlugin(ScrollTrigger);
 
-  const [menuOpen, setMenuOpen] = useState(false)
 
-  console.log(menuOpen)
-
-  function openOverlay() {
-    setMenuOpen((menu) => !menu)
-  }
-  tl2.to(overlay.current, {x: 200, duration: 2, ease:"power4.inOut"})
-
-  if(menuOpen) {
-    tl2.play()
-  } else if(!menuOpen) {
-    tl2.reverse()
-  }
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -35,13 +21,8 @@ export default function NavBar({ sectionRefs }) {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
-
-
   });
 
-  gsap.registerPlugin(ScrollTrigger);
-
- 
   useEffect(() => {
     tl.to(navBar.current, {
       y: 0,
@@ -67,7 +48,7 @@ export default function NavBar({ sectionRefs }) {
         toggleActions: "restart reverse restart reverse",
       });
     });
-  });
+  }, []);
 
   return (
     <header
@@ -92,18 +73,18 @@ export default function NavBar({ sectionRefs }) {
           />
         </svg>
       </a>
-      <nav className="hidden space-x-7 font-grotesk text-body-3 sm:block">
-        <a href="#about" className="group relative">
+      <nav className=" space-x-7 font-grotesk text-body-3 sm:block">
+        <a href="#about" className="group relative hidden md:inline-block">
           <span>about</span>
-          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+          <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
-        <a href="#services" className="group relative">
+        <a href="#services" className="group relative hidden md:inline-block">
           <span>services</span>
-          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+          <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
-        <a href="#works" className="group relative">
+        <a href="#works" className="group relative hidden md:inline-block">
           <span>projects</span>
-          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+          <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
         </a>
         <a
           ref={cta}
@@ -116,47 +97,7 @@ export default function NavBar({ sectionRefs }) {
           </span>
         </a>
       </nav>
-      <button
-        id="hamburger-btn"
-        onClick={openOverlay}
-        className="relative flex h-7 w-10 cursor-pointer items-center space-y-1 transition duration-500 ease-in-out sm:hidden z-50"
-      >
-        <span
-          ref={(el) => (hamburger.current[0] = el)}
-          className="line-1 hamburger-0 absolute h-[0.16rem] w-9 -translate-y-1 rounded-full bg-accent-400 transition-transform duration-200"
-        ></span>
-        <span
-          ref={(el) => (hamburger.current[1] = el)}
-          className="hamburger absolute h-[0.16rem] w-9 translate-y-1 rounded-full bg-accent-400 transition-transform duration-200"
-        ></span>
-      </button>
-      {/* Menu Overlay for Mobile */}
-      <div ref={overlay} className="fixed left-0 top-0 translate-x-full flex h-screen bg-secondary-100 transition-all w-screen">
-      <nav className="hidden space-x-7 font-grotesk text-body-3 sm:block">
-        <a href="#about" className="group relative">
-          <span>about</span>
-          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
-        <a href="#services" className="group relative">
-          <span>services</span>
-          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
-        <a href="#works" className="group relative">
-          <span>projects</span>
-          <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-        </a>
-        <a
-          ref={cta}
-          className="button group relative hover:bg-transparent"
-          href="#contact"
-        >
-          <span className="relative w-fit">
-            <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
-            <span>Let&apos;s Talk.</span>
-          </span>
-        </a>
-      </nav>
-      </div>
+      
     </header>
   );
 }

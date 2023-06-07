@@ -27,15 +27,10 @@
     font-style: normal;
   }
 
- * {
-  cursor: auto;
-  border: 1px solid red
-
- }
 
  @media (min-width: 640px) {
   * {
-    cursor: none !important;
+    cursor: none
   }
 }
   a,

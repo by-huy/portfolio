@@ -10,8 +10,16 @@ export default function Contact() {
     }, 1000);
   });
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <section id="contact" className="mt-20 overflow-hidden" aria-label="contact me">
+    <section
+      id="contact"
+      className="mt-20 overflow-hidden"
+      aria-label="contact me"
+    >
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
@@ -58,10 +66,21 @@ export default function Contact() {
             I am looking for freelance opportunities or internships in startups,
             agencies, and design studios.
           </p>
-          <form autoComplete="off" className="mt-10 font-grotesk">
+          <form
+            onSubmit={handleSubmit}
+            name="contact"
+            autoComplete="off"
+            method="POST"
+            data-netlify="true"
+            // eslint-disable-next-line react/no-unknown-property
+            netlify-honeypot="bot-field"
+            className="mt-10 font-grotesk"
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
                 <input
+                  required
                   type="text"
                   name="name"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
@@ -76,6 +95,7 @@ export default function Contact() {
               </div>
               <div className="relative z-0">
                 <input
+                  required
                   type="text"
                   name="email"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
@@ -90,6 +110,7 @@ export default function Contact() {
               </div>
               <div className="relative z-0 sm:col-span-2">
                 <textarea
+                  required
                   name="message"
                   rows="5"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
@@ -103,10 +124,15 @@ export default function Contact() {
                 </label>
               </div>
             </div>
-            <button type="submit" className="button group mt-10 hover:bg-transparent hover:border-accent-400 border duration-200">
+            <button
+              type="submit"
+              className="button group mt-10 border duration-200 hover:border-accent-400 hover:bg-transparent"
+            >
               <span className="relative">
                 <span className="absolute bottom-2 h-1 w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
-                <span className="group-hover:text-accent-400">Send Message</span>
+                <span className="group-hover:text-accent-400">
+                  Send Message
+                </span>
               </span>
             </button>
           </form>
@@ -115,11 +141,17 @@ export default function Contact() {
           <div className="space-y-3 ">
             <h4 className="text-body-1 font-semibold">Contact Details</h4>
             <div className="flex flex-col space-y-3 text-body-2">
-              <a href="mailto:hello@huyng.xyz" className="group relative w-fit">
+              <a
+                href="mailto:hello@huyng.xyz"
+                className="group relative w-fit cursor-pointer"
+              >
                 <span>hello@huyng.xyz</span>
                 <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
-              <a href="tel:+61 435 107 203" className="group relative w-fit">
+              <a
+                href="tel:+61 435 107 203"
+                className="group relative w-fit cursor-pointer"
+              >
                 <span>+61 435 107 203</span>
                 <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
@@ -145,7 +177,7 @@ export default function Contact() {
                 <Icon icon="mdi:github" color="#666" />
                 <div className="relative">
                   <span>Github</span>
-                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
                 </div>
               </a>
               <a
