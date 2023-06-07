@@ -36,7 +36,6 @@ export default function NavBar({ sectionRefs }) {
         trigger: section,
         start: "top 375px",
         end: "bottom 300px",
-        markers: true,
         animation: gsap
           .timeline()
           .to(navBar.current, { color: "#DDDDD5" })
