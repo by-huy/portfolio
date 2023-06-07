@@ -36,10 +36,9 @@ export default function NavBar({ sectionRefs }) {
         trigger: section,
         start: "top 375px",
         end: "bottom 300px",
-        // markers: true,
+        markers: true,
         animation: gsap
           .timeline()
-          // this animation targets every elements with the class of .bg-secondary-100
           .to(navBar.current, { color: "#DDDDD5" })
           .to(hamburger.current, { backgroundColor: "#DDDDD5" }, 0)
           .to(cta.current, { backgroundColor: "#D1D1C7", color: "#0E0E0C" }, 0)
