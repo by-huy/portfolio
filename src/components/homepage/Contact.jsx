@@ -10,10 +10,6 @@ export default function Contact() {
     }, 1000);
   });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
   return (
     <section
       id="contact"
@@ -69,7 +65,6 @@ export default function Contact() {
           <form
             name="contact"
             autoComplete="off"
-            method="POST"
             // eslint-disable-next-line react/no-unknown-property
             className="mt-10 font-grotesk"
             // eslint-disable-next-line react/no-unknown-property
