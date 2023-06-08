@@ -38,6 +38,7 @@ const App = () => {
           toggleActions: "play none none none",
 
         });
+        ScrollTrigger.refresh()
       });
     });
   }, []);

@@ -61,6 +61,8 @@ export default function Works({ forwardedRef }) {
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={ibgroup}
               alt="ibgroup website mockup"
+              width="800"
+              height="600"
             />
           </a>
           <div className="mt-4">
@@ -82,6 +84,8 @@ export default function Works({ forwardedRef }) {
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={memento}
               alt="memento website mockup"
+              width="600"
+              height="800"
             />
           </a>
           <div className="mt-4">
@@ -99,6 +103,8 @@ export default function Works({ forwardedRef }) {
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={acc}
               alt="real business accountant project mockup"
+              width="600"
+              height="600"
             />
           </a>
           <div className="mt-4">
@@ -116,6 +122,8 @@ export default function Works({ forwardedRef }) {
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={daddy}
               alt="godaddy clone page mockup"
+              width="800"
+              height="600"
             />
           </a>
           <div className="mt-4">
@@ -133,6 +141,8 @@ export default function Works({ forwardedRef }) {
               className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
               src={sunnyside}
               alt="sunnyside project mockup"
+              width="800"
+              height="600"
             />
           </a>
           <div className="mt-4">

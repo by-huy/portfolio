@@ -46,6 +46,8 @@ export default function About() {
             loading="lazy"
             className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto"
             src={profileImg}
+            width="600"
+            height="800"
             alt="portrait image of Huy standing in front of a tree and foliage"
           />
         </div>
