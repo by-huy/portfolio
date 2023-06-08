@@ -67,18 +67,20 @@ export default function Contact() {
             autoComplete="off"
             // eslint-disable-next-line react/no-unknown-property
             className="mt-10 font-grotesk"
-            // eslint-disable-next-line react/no-unknown-property
-            netlify
+            method="POST" 
+            data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="contact"></input>
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
-                <input
-                  required
-                  type="text"
-                  name="name"
-                  className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
-                  placeholder=" "
-                />
+                  <input
+                    required
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
+                    placeholder=" "
+                  />
                 <label
                   htmlFor="name"
                   className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
@@ -91,6 +93,7 @@ export default function Contact() {
                   required
                   type="text"
                   name="email"
+                  id="email"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                   placeholder=" "
                 />
@@ -104,6 +107,7 @@ export default function Contact() {
               <div className="relative z-0 sm:col-span-2">
                 <textarea
                   required
+                  id="message"
                   name="message"
                   rows="5"
                   className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"

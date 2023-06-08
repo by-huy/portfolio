@@ -40,7 +40,7 @@ export default function About() {
           </svg>
         </div>
       </div>
-      <div className="mt-12 flex w-full flex-col items-start gap-8 sm:flex-row lg:gap-10">
+      <div className="mt-10 flex w-full flex-col items-start gap-8 sm:flex-row lg:gap-10">
         <div className="top-28 sm:sticky">
           <img
             loading="lazy"
