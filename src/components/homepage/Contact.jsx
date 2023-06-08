@@ -62,45 +62,15 @@ export default function Contact() {
             I am looking for freelance opportunities or internships in startups,
             agencies, and design studios.
           </p>
-          <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Role:{" "}
-                <select name="role[]" multiple>
-                  <option value="leader">Leader</option>
-                  <option value="follower">Follower</option>
-                </select>
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message"></textarea>
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
-
-          {/* <form
+          <form
             name="contact"
+            action="/contact"
             autoComplete="off"
             // eslint-disable-next-line react/no-unknown-property
             className="mt-10 font-grotesk"
             method="POST" 
-            data-netlify="true"
           >
-            <input type="hidden" name="form-name" value="contact"></input>
+            <input type="hidden" name="form-name" value="contact"/>
             <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
               <div className="relative z-0">
                   <input
@@ -162,7 +132,7 @@ export default function Contact() {
                 </span>
               </span>
             </button>
-          </form> */}
+          </form>
         </div>
         <div className="col-span-2 grid grid-cols-1 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1">
           <div className="space-y-3 ">
