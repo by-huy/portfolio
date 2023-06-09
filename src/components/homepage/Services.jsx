@@ -1,7 +1,7 @@
 export default function Services() {
   return (
-    <section id="services" className="my-20 select-none" aria-label="services">
-      <div className="section-heading">
+    <section id="services" className="my-20" aria-label="services">
+      <div className="section-heading select-none">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
             className="scale-90 sm:scale-125"
@@ -55,7 +55,7 @@ export default function Services() {
             <div className="h-1 w-full opacity-50 bg-accent-100 md:hidden"></div>
           </div>
 
-          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem]">
+          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem] select-none">
             <p className="font-general text-special font-extrabold">
               Web Development
             </p>
@@ -85,7 +85,7 @@ export default function Services() {
             </div>
             <div className="h-1 w-full opacity-50 bg-accent-100 md:hidden"></div>
           </div>
-          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem]">
+          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem] select-none">
             <p className="font-general text-special font-extrabold">
               JavaScript
             </p>

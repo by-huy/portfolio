@@ -5,6 +5,17 @@
 
 
 @layer base {
+  
+  ::-moz-selection {
+    background: #D1D1C7
+  }
+  ::-webkit-selection {
+    background: #D1D1C7
+  }
+  ::selection {
+    background: #D1D1C7
+  }
+
   .text-smooth {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

@@ -2,8 +2,8 @@ import profileImg from "/src/assets/images/profile.webp";
 
 export default function About() {
   return (
-    <section className=" select-none " aria-label="about me">
-      <div className="section-heading">
+    <section aria-label="about me">
+      <div className="section-heading select-none">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
         <svg
             className="scale-90 sm:scale-125"
