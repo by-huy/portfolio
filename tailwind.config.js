@@ -15,7 +15,7 @@ export default {
       'body-1': ['clamp(1.1rem, 2vw, 1.3rem)'], //TODO
       'body-2': ['clamp(1rem, 1.5vw, 1.5rem)'],
       'body-3': '1.1rem',
-      'body-4': ['clamp(0.85rem, 2vw, 1rem)'],
+      'body-4': ['clamp(0.75rem, 3vw, 1rem)'],
     },
     letterSpacing: {
       'headings': '-0.03em'
