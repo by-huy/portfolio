@@ -8,8 +8,8 @@ export default {
     fontSize: {
       'title': ['clamp(3.75rem, 14vw, 8.75rem)'],
       'heading-1': ['clamp(3.4rem, 8vw, 5.66rem)'],
-      'heading-2': ['clamp(2.8rem, 8vw, 5.66rem)'],
-      'heading-3': ['clamp(2.1rem, 5vw, 2.75rem)'], //TODO
+      'heading-2': ['clamp(2.4rem, 8vw, 5.66rem)'],
+      'heading-3': ['clamp(2rem, 5vw, 2.75rem)'], //TODO
       'special': ['clamp(2rem, 4vw, 3.25rem)'],
       'works-title': ['clamp(1.25rem, 2vw, 1.5rem)'],
       'body-1': ['clamp(1.1rem, 2vw, 1.3rem)'], //TODO

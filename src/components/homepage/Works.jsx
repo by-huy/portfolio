@@ -12,10 +12,10 @@ export default function Works({ forwardedRef }) {
       id="works"
       className="nav-change overflow-hidden"
     >
-      <div className="section-heading border border-primary-200">
+      <div className="section-heading">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
-            className=" scale-75 sm:scale-125"
+            className=" scale-90 sm:scale-125"
             width="20"
             height="20"
             viewBox="0 0 32 16"
@@ -33,7 +33,7 @@ export default function Works({ forwardedRef }) {
             recent work
           </h2>
           <svg
-            className="scale-75 sm:scale-125"
+            className="scale-90 sm:scale-125"
             width="20"
             height="20"
             viewBox="0 0 32 16"
