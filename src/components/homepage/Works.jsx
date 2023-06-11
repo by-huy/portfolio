@@ -3,10 +3,9 @@ import memento from "/src/assets/images/memento-desktop.webp";
 import acc from "/src/assets/images/acc-square.webp";
 import daddy from "/src/assets/images/godaddy-desktop.webp";
 import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
+import Projects from "../ui/Projects";
 
 export default function Works({ forwardedRef }) {
-  
-
   return (
     <section
       ref={forwardedRef}
@@ -15,7 +14,7 @@ export default function Works({ forwardedRef }) {
     >
       <div className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
-        <svg
+          <svg
             className="scale-90 sm:scale-125"
             width="20"
             height="20"
@@ -53,106 +52,62 @@ export default function Works({ forwardedRef }) {
       <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
         {/* Project #1 */}
         <div className=" col-span-1 md:col-span-12">
-          <a
-            href="https://musical-stroopwafel-1c2327.netlify.app/landing.html"
-            className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear"
-          >
-            <img
-              className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
-              src={ibgroup}
-              alt="ibgroup website mockup"
-              width="800"
-              height="600"
-            />
-          </a>
-          <div className="mt-4">
-            <h3 className="text-works-title font-medium uppercase text-primary-200">
-              IB Group vietnam website
-            </h3>
-            <p className="text-body-2 font-light text-primary-400">
-              Web Design / Frontend Development
-            </p>
-          </div>
+          <Projects
+            link="https://musical-stroopwafel-1c2327.netlify.app/landing.html"
+            img={ibgroup}
+            alt="IBGroup vietnam website mockup"
+            name="ibgroup vietnam website"
+            type="Web Design • Frontend Development"
+            year="2023"
+            tools="HTML • TailwindCSS • JavaScript • Figma"
+
+          />
         </div>
         {/* Project #2 */}
         <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
-          <a
-            href="https://mementostudio.netlify.app/"
-            className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear"
-          >
-            <img
-              className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
-              src={memento}
-              alt="memento website mockup"
-              width="600"
-              height="800"
-            />
-          </a>
-          <div className="mt-4">
-            <h3 className="text-works-title font-medium uppercase text-primary-200">
-              MEMENTO STUDIO LANDING PAGE
-            </h3>
-            <p className="text-body-2 font-light text-primary-400">
-              Web Design / Frontend Development
-            </p>
-          </div>
+          <Projects
+            link="https://mementostudio.netlify.app/"
+            img={memento}
+            alt="memento landing page mockup"
+            name="memento studio landing page"
+            type="Frontend Development"
+            year="2023"
+            tools="HTML • TailwindCSS • JavaScript"
+          />
         </div>
         <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
-          <a href="https://realbusinessaccountants.netlify.app" className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
-            <img
-              className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
-              src={acc}
-              alt="real business accountant project mockup"
-              width="600"
-              height="600"
-            />
-          </a>
-          <div className="mt-4">
-            <h3 className="text-works-title font-medium uppercase text-primary-200">
-              REAL BUSINESS ACCOUNTANTS
-            </h3>
-            <p className="text-body-2 font-light text-primary-400">
-              Web Design / Frontend Development
-            </p>
-          </div>
+          <Projects
+            link="https://realbusinessaccountants.netlify.app"
+            img={acc}
+            alt="real business accountant project mockup"
+            name="real business accountants"
+            type="Web Design • Frontend Development"
+            year="2023"
+            tools="HTML • CSS • JavaScript • Figma"
+          />
         </div>
         <div className="col-span-1 h-fit pt-0 md:col-span-8 md:pt-20">
-          <a href="https://godaddyuiclone.netlify.app" className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
-            <img
-              className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
-              src={daddy}
-              alt="godaddy clone page mockup"
-              width="800"
-              height="600"
-            />
-          </a>
-          <div className="mt-4">
-            <h3 className="text-works-title font-medium uppercase text-primary-200">
-              GODADDY LANDING PAGE CLONE
-            </h3>
-            <p className="text-body-2 font-light text-primary-400">
-              Web Design / Frontend Development
-            </p>
-          </div>
+          <Projects
+            link="https://godaddyuiclone.netlify.app"
+            img={daddy}
+            alt="godaddy clone page mockup"
+            name="GODADDY LANDING PAGE CLONE"
+            type="Frontend Development"
+            year="2023"
+            tools="HTML • TailwindCSS • JavaScript"
+          />
         </div>
         <div className="col-span-1 h-fit md:col-span-4">
-          <a href="https://sunnysidechallenge.netlify.app" className="img group inline-block overflow-hidden hover:rounded-3xl duration-200 ease-linear">
-            <img
-              className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
-              src={sunnyside}
-              alt="sunnyside project mockup"
-              width="800"
-              height="600"
-            />
-          </a>
-          <div className="mt-4">
-            <h3 className="text-works-title font-medium uppercase text-primary-200">
-              SUNNYSIDE LANDING PAGE
-            </h3>
-            <p className="text-body-2 font-light text-primary-400">
-              Web Design / Frontend Development
-            </p>
-          </div>
+        <Projects
+            link="https://sunnysidechallenge.netlify.app"
+            img={sunnyside}
+            alt="sunnyside project mockup"
+            name="SUNNYSIDE LANDING PAGE"
+            type="Frontend Development"
+            year="2022"
+            tools="HTML • TailwindCSS • JavaScript"
+          />
+         
         </div>
       </div>
     </section>

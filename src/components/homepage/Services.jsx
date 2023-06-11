@@ -1,4 +1,26 @@
+import ServiceUi from "../ui/ServiceUi";
+
 export default function Services() {
+  const expertiseItems = [
+    "Web Development",
+    "Web Design",
+    "Wireframing",
+    "UI/UX Design",
+    "Branding",
+  ];
+
+  const toolBoxItems = [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Figma",
+    "Webflow",
+    "GSAP",
+    "TailwindCSS",
+    "ReactJS",
+
+  ];
+
   return (
     <section id="services" className="my-20" aria-label="services">
       <div className="section-heading select-none">
@@ -39,66 +61,19 @@ export default function Services() {
         </div>
       </div>
       <div className="space-y-14">
-        {/* EXTRACT THIS INTO A COMPONENT */}
-        <div className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
-          <div className="space-y-6">
-            <div className="space-y-3">
-              <h3 className="text-heading-3 font-semibold leading-tight">
-                my expertises.
-              </h3>
-              <p className="max-w-md text-body-1">
-                I focus on all things digital and web related. With each of my
-                services, my goal is to deliver a functional and elevating
-                digital experience for everyone.
-              </p>
-            </div>
-            <div className="h-1 w-full opacity-50 bg-accent-100 md:hidden"></div>
-          </div>
-
-          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem] select-none">
-            <p className="font-general text-special font-extrabold">
-              Web Development
-            </p>
-            <p className="font-general text-special font-extrabold">
-              Web Design
-            </p>
-            <p className="font-general text-special font-extrabold">
-              Wireframing
-            </p>
-            <p className="font-general text-special font-extrabold">
-              UI/UX Design
-            </p>
-            <p className="font-general text-special font-extrabold">Branding</p>
-          </div>
-        </div>
-        <div className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
-          <div className="space-y-6">
-            <div className="space-y-3">
-              <h3 className="text-heading-3 font-semibold leading-tight">
-                my digital tool box.
-              </h3>
-              <p className="max-w-md text-body-1">
-                These are my go to tech stack to make any projects happen. I am
-                always fond of learning more about my current stack and new
-                technologies that could expand my horizons.
-              </p>
-            </div>
-            <div className="h-1 w-full opacity-50 bg-accent-100 md:hidden"></div>
-          </div>
-          <div className="leading-[2.3rem] text-secondary-500 md:leading-[2.5rem] lg:leading-[3.4rem] select-none">
-            <p className="font-general text-special font-extrabold">
-              JavaScript
-            </p>
-            <p className="font-general text-special font-extrabold">HTML</p>
-            <p className="font-general text-special font-extrabold">CSS</p>
-            <p className="font-general text-special font-extrabold">Figma</p>
-            <p className="font-general text-special font-extrabold">GSAP</p>
-            <p className="font-general text-special font-extrabold">
-              TailwindCSS
-            </p>
-            <p className="font-general text-special font-extrabold">ReactJS</p>
-          </div>
-        </div>
+        <ServiceUi
+          title="my expertises."
+          description="I focus on all things digital and web related. With each of my
+          services, my goal is to deliver a functional and elevating
+          digital experience for everyone."
+          items={expertiseItems}
+        />
+        <ServiceUi
+          title="my digital tool box."
+          description="These are my go to tech stack to make any projects happen. I am always fond of learning more about my current stack and new technologies that could expand my horizons."
+          items={toolBoxItems}
+        />
+        
       </div>
     </section>
   );
