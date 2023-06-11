@@ -41,7 +41,11 @@ export default {
       'accent-200': '#4D4D4D',
       'accent-100': '#666666',
     },
-    extend: {}
+    extend: {
+      screens: {
+        'md2': '872px'
+      }
+    }
   },
   plugins: [],
 }

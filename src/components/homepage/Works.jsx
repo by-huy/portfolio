@@ -49,9 +49,9 @@ export default function Works({ forwardedRef }) {
           </svg>
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
+      <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md2:grid-cols-12">
         {/* Project #1 */}
-        <div className=" col-span-1 md:col-span-12">
+        <div className=" col-span-1 md2:col-span-12">
           <Projects
             link="https://musical-stroopwafel-1c2327.netlify.app/landing.html"
             img={ibgroup}
@@ -64,7 +64,7 @@ export default function Works({ forwardedRef }) {
           />
         </div>
         {/* Project #2 */}
-        <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
+        <div className="col-span-1 pt-0 md2:col-span-7 md2:pt-16">
           <Projects
             link="https://mementostudio.netlify.app/"
             img={memento}
@@ -75,7 +75,7 @@ export default function Works({ forwardedRef }) {
             tools="HTML • TailwindCSS • JavaScript"
           />
         </div>
-        <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
+        <div className="col-span-1 pt-0 md2:col-span-5 md2:pt-80">
           <Projects
             link="https://realbusinessaccountants.netlify.app"
             img={acc}
@@ -86,7 +86,7 @@ export default function Works({ forwardedRef }) {
             tools="HTML • CSS • JavaScript • Figma"
           />
         </div>
-        <div className="col-span-1 h-fit pt-0 md:col-span-8 md:pt-20">
+        <div className="col-span-1 h-fit pt-0 md2:col-span-8 md2:pt-20">
           <Projects
             link="https://godaddyuiclone.netlify.app"
             img={daddy}
@@ -97,7 +97,7 @@ export default function Works({ forwardedRef }) {
             tools="HTML • TailwindCSS • JavaScript"
           />
         </div>
-        <div className="col-span-1 h-fit md:col-span-4">
+        <div className="col-span-1 h-fit md2:col-span-4">
         <Projects
             link="https://sunnysidechallenge.netlify.app"
             img={sunnyside}
