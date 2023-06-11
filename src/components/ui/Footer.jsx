@@ -4,7 +4,7 @@ export default function Footer() {
   }
 
   return (
-    <div className="mt-14 flex items-end justify-between px-5 py-4 sm:flex">
+    <footer className="mt-14 flex items-end justify-between px-5 py-4 sm:flex">
       <div className="flex flex-col md:flex-row md:w-[62.5vw] lg:w-[57.5vw] justify-between">
         <div className="flex space-x-1" >
           <span>&copy;</span>
@@ -54,6 +54,6 @@ export default function Footer() {
           </svg>
         </span>
       </button>
-    </div>
+    </footer>
   );
 }
