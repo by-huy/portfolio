@@ -143,7 +143,7 @@ export default function Contact() {
                 className="group relative w-fit cursor-pointer"
               >
                 <span>hello@huyng.xyz</span>
-                <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
               <a
                 href="tel:+61 435 107 203"
@@ -174,7 +174,7 @@ export default function Contact() {
                 <Icon icon="mdi:github" color="#666" />
                 <div className="relative">
                   <span>Github</span>
-                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
                 </div>
               </a>
               <a
@@ -184,7 +184,7 @@ export default function Contact() {
                 <Icon icon="mdi:linkedin" color="#666" />
                 <div className="relative">
                   <span>LinkedIn</span>
-                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
                 </div>
               </a>
               <a
