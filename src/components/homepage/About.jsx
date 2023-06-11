@@ -67,7 +67,7 @@ export default function About() {
               that talk about frontend development, productivity and technology
               on{" "}
               <a
-                className="underline"
+                className="underline hover:text-secondary-700 duration-300 ease-in-out"
                 href="https://www.youtube.com/channel/UCBOAB9RV647G93GxLhEXleA"
               >
                 YouTube 📸
