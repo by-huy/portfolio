@@ -60,7 +60,7 @@ export default function About() {
               I am a self-taught creative frontend developer, web designer, and
               UI/UX designer based in Melbourne, Australia. I am passionate in
               catering my works for emerging start ups and small businesses that
-              inspire and connect with people 😎.
+              make an impact, inspire and connect with people 😎.
               <br></br>
               <br></br>
               When I am not developing or designing, I like to create videos
