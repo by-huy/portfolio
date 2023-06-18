@@ -14,7 +14,7 @@ export default function About() {
     ScrollTrigger.create({
       trigger: aboutSection.current,
       start: "top 525px",
-      markers: true,
+      // markers: true,
       animation: gsap
         .timeline()
         .to(profile.current, { scale: 1, ease: "power4.out", duration: 2.5 })
