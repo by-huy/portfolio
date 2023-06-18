@@ -1,8 +1,34 @@
+import { useEffect, useRef } from "react";
 import profileImg from "/src/assets/images/profile.webp";
+import { ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
 
 export default function About() {
+  const profile = useRef(null)
+  const aboutSection = useRef(null)
+
+
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: profile.current,
+      // start: "top 200px",
+      // end: "bottom 300px",
+      markers: true,
+      scrub: true,
+      pin: false,
+      invalidateOnRefresh: true,
+      animation: gsap
+        .timeline()
+        .to(profile.current, {y:() => profile.current.offsetHeight - aboutSection.current.offsetHeight, duration: 2.5 }),
+
+      toggleActions: "play none none none",
+    });
+    ScrollTrigger.refresh();
+
+  }, [profile])
+
   return (
-    <section aria-label="about me">
+    <section ref={aboutSection} aria-label="about me">
       <div className="section-heading select-none">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
         <svg
@@ -41,8 +67,9 @@ export default function About() {
         </div>
       </div>
       <div className="mt-10 flex w-full flex-col items-start gap-8 sm:flex-row lg:gap-10">
-        <div className="top-28 sm:sticky">
+        <div className="top-28 sm:sticky overflow-hidden rounded-md">
           <img
+            ref={profile}
             loading="lazy"
             className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto"
             src={profileImg}
