@@ -1,8 +1,31 @@
 import { Icon } from "@iconify/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
 
 export default function Contact() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+  const heading = useRef(null)
+  const body = useRef(null)
+  const contactSection = useRef(null)
+
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: contactSection.current,
+      start:"180px bottom",
+
+      // markers: true,
+      animation: gsap
+        .timeline()
+        .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
+        .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
+
+      toggleActions: "play none none none",
+    });
+    ScrollTrigger.refresh();
+
+  }, [contactSection])
 
   useEffect(() => {
     setInterval(() => {
@@ -16,7 +39,8 @@ export default function Contact() {
       className="mt-20 overflow-hidden"
       aria-label="contact me"
     >
-      <div className="section-heading ">
+      
+      <div   className="section-heading ">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
           <svg
             className="scale-90 sm:scale-125"
@@ -53,12 +77,12 @@ export default function Contact() {
           </svg>
         </div>
       </div>
-      <div className="mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12">
+      <div ref={contactSection} className="mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12">
         <div className="col-span-4">
-          <h3 className="max-w-lg text-heading-3 font-semibold leading-tight">
+          <h3 ref={heading} className="max-w-lg text-heading-3 font-semibold leading-tight translate-y-10 opacity-0">
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
-          <p className="mt-4 max-w-md text-body-2 text-accent-100">
+          <p ref={body} className="mt-4 max-w-md text-body-2 text-accent-100 translate-y-10 opacity-0">
             I am looking for freelance opportunities or internships in startups,
             agencies, and design studios.
           </p>

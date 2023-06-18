@@ -6,23 +6,27 @@ import { gsap } from "gsap";
 export default function About() {
   const profile = useRef(null)
   const aboutSection = useRef(null)
+  const heading = useRef(null)
+  const body = useRef(null)
 
 
   useEffect(() => {
     ScrollTrigger.create({
-      trigger: profile.current,
+      trigger: aboutSection.current,
       start: "top 200px",
       end: "bottom 300px",
-      markers: true,
+      // markers: true,
       animation: gsap
         .timeline()
-        .to(profile.current, { scale: 1.10, ease: "power4.out", duration: 3 }),
+        .to(profile.current, { scale: 1, ease: "power4.out", duration: 2 })
+        .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
+        .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
 
       toggleActions: "play none none none",
     });
     ScrollTrigger.refresh();
 
-  }, [profile])
+  }, [aboutSection])
 
   return (
     <section ref={aboutSection} aria-label="about me">
@@ -63,12 +67,12 @@ export default function About() {
           </svg>
         </div>
       </div>
-      <div className="mt-10 flex w-full flex-col items-start gap-8 sm:flex-row lg:gap-10">
+      <div className="mt-10 flex w-full flex-col items-start gap-8 sm:flex-row lg:gap-10 ">
         <div className="top-28 sm:sticky overflow-hidden rounded-md">
           <img
             ref={profile}
             loading="lazy"
-            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto"
+            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto scale-125"
             src={profileImg}
             width="600"
             height="800"
@@ -77,10 +81,10 @@ export default function About() {
         </div>
         <div className="top-20 sm:sticky md:top-28 lg:top-32">
           <div className="w-full space-y-4">
-            <h3 className="text-heading-3 font-semibold leading-tight">
+            <h3 ref={heading} className="text-heading-3 font-semibold leading-tight translate-y-10 opacity-0">
               A brief intro, who am I?
             </h3>
-            <p className="text-body-1">
+            <p ref={body} className="text-body-1 translate-y-10 opacity-0">
               I am a self-taught creative frontend developer, web designer, and
               UI/UX designer based in Melbourne, Australia. I am passionate in
               catering my works for emerging start ups and small businesses that
