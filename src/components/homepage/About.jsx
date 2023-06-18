@@ -20,8 +20,6 @@ export default function About() {
       animation: gsap
         .timeline()
         .to(profile.current, {y:() => profile.current.offsetHeight - aboutSection.current.offsetHeight, duration: 2.5 }),
-
-      toggleActions: "play none none none",
     });
     ScrollTrigger.refresh();
 
@@ -71,7 +69,7 @@ export default function About() {
           <img
             ref={profile}
             loading="lazy"
-            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto"
+            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto scale-[140%]"
             src={profileImg}
             width="600"
             height="800"
