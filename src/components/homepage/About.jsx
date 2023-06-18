@@ -13,12 +13,11 @@ export default function About() {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: aboutSection.current,
-      start: "top 200px",
-      end: "bottom 300px",
-      // markers: true,
+      start: "top 525px",
+      markers: true,
       animation: gsap
         .timeline()
-        .to(profile.current, { scale: 1, ease: "power4.out", duration: 2 })
+        .to(profile.current, { scale: 1, ease: "power4.out", duration: 2.5 })
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
         .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
 
@@ -29,7 +28,7 @@ export default function About() {
   }, [aboutSection])
 
   return (
-    <section ref={aboutSection} aria-label="about me">
+    <section  aria-label="about me">
       <div className="section-heading select-none">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
         <svg
@@ -79,7 +78,7 @@ export default function About() {
             alt="portrait image of Huy standing in front of a tree and foliage"
           />
         </div>
-        <div className="top-20 sm:sticky md:top-28 lg:top-32">
+        <div  ref={aboutSection} className="top-20 sm:sticky md:top-28 lg:top-32">
           <div className="w-full space-y-4">
             <h3 ref={heading} className="text-heading-3 font-semibold leading-tight translate-y-10 opacity-0">
               A brief intro, who am I?
