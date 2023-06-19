@@ -13,13 +13,27 @@ export default function About() {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: aboutSection.current,
-      start: "top 525px",
-      // markers: true,
+      start: "top 400px",
+      scrub: true,
       animation: gsap
         .timeline()
         .to(profile.current, { scale: 1, ease: "power4.out", duration: 2.5 })
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
         .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
+
+      toggleActions: "play none none none",
+    });
+    ScrollTrigger.refresh();
+
+  }, [aboutSection])
+
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: aboutSection.current,
+      start: "top 400px",
+      animation: gsap
+        .timeline()
+        .to(profile.current, { scale: 1, ease: "power4.out", duration: 2.5 }),
 
       toggleActions: "play none none none",
     });
@@ -71,7 +85,7 @@ export default function About() {
           <img
             ref={profile}
             loading="lazy"
-            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto scale-125"
+            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto scale-150"
             src={profileImg}
             width="600"
             height="800"
