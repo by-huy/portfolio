@@ -29,12 +29,14 @@ export default function NavBar({ sectionRefs }) {
     });
   });
 
+
   useEffect(() => {
     sectionRefs.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top 375px",
         end: "bottom 300px",
+        // markers: true,
         animation: gsap
           .timeline()
           .to(navBar.current, { color: "#DDDDD5" })
@@ -45,7 +47,7 @@ export default function NavBar({ sectionRefs }) {
       });
     });
     ScrollTrigger.refresh();
-  });
+  }, [sectionRefs]);
 
   return (
     <header

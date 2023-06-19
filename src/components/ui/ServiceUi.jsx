@@ -15,7 +15,7 @@ export default function ServiceUi({ title, description, items }) {
     ScrollTrigger.create({
       trigger: serviceUi.current,
       // markers: true,
-      start:"-20px bottom",
+      start:"150px bottom",
       animation: gsap
         .timeline()
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)

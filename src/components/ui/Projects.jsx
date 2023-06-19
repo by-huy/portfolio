@@ -6,7 +6,7 @@ export default function Projects({ name, img, alt, type, link, year, tools }) {
         className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
       >
         <img
-          className=" h-auto w-full duration-700 ease-in-out group-hover:scale-105"
+          className="w-full duration-700 ease-in-out group-hover:scale-105"
           src={img}
           alt={alt}
           width="800"
