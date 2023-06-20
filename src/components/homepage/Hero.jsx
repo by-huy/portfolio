@@ -36,7 +36,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero relative flex w-full h-screen select-none items-center justify-center" aria-label="hero">
+    <section id="hero" className="hero relative flex w-full h-screen select-none items-center justify-center" aria-label="hero">
       <div className="z-10 flex flex-col overflow-hidden w-full items-center text-title font-bold uppercase text-accent-300">
         <div className="title">
           {/* Learn more about useRef */}
