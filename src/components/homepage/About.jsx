@@ -17,7 +17,6 @@ export default function About() {
       scrub: true,
       animation: gsap
         .timeline()
-        .to(profile.current, { scale: 1, ease: "power4.out", duration: 2.5 })
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
         .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
 
@@ -30,7 +29,7 @@ export default function About() {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: aboutSection.current,
-      start: "top 400px",
+      start: "-40px 100px",
       animation: gsap
         .timeline()
         .to(profile.current, { scale: 1, ease: "power4.out", duration: 2.5 }),
