@@ -6,13 +6,14 @@ import { gsap } from "gsap";
 export default function About() {
   const profile = useRef(null)
   const aboutSection = useRef(null)
+  const aboutText = useRef(null)
   const heading = useRef(null)
   const body = useRef(null)
 
 
   useEffect(() => {
     ScrollTrigger.create({
-      trigger: aboutSection.current,
+      trigger: aboutText.current,
       start: "top 400px",
       scrub: true,
       animation: gsap
@@ -41,7 +42,7 @@ export default function About() {
   }, [aboutSection])
 
   return (
-    <section  aria-label="about me">
+    <section ref={aboutSection}  aria-label="about me">
       <div className="section-heading select-none">
         <div className="heading flex translate-y-28 items-center justify-center space-x-3">
         <svg
@@ -91,7 +92,7 @@ export default function About() {
             alt="portrait image of Huy standing in front of a tree and foliage"
           />
         </div>
-        <div  ref={aboutSection} className="top-20 sm:sticky md:top-28 lg:top-32">
+        <div  ref={aboutText} className="top-20 sm:sticky md:top-28 lg:top-32">
           <div className="w-full space-y-4">
             <h3 ref={heading} className="text-heading-3 font-semibold leading-tight translate-y-10 opacity-0">
               A brief intro, who am I?
