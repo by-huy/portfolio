@@ -21,7 +21,7 @@ export default function ServiceUi({ title, description, items }) {
         .timeline()
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
         .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2)
-        .to (line.current, { width: "100%", ease: "power4.inOut", duration: 1.25 }, 0.2)
+        .to (line.current, { width: "100%", ease: "power4.inOut", duration: 1.5 }, 0.2)
         .to(services.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25}, 0.5),
 
       toggleActions: "play none none none",

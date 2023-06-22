@@ -15,7 +15,6 @@ export default function About() {
     ScrollTrigger.create({
       trigger: aboutText.current,
       start: "top 400px",
-      scrub: true,
       animation: gsap
         .timeline()
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
