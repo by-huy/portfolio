@@ -6,25 +6,9 @@ import { gsap } from "gsap";
 export default function About() {
   const profile = useRef(null)
   const aboutSection = useRef(null)
-  const aboutText = useRef(null)
   const heading = useRef(null)
   const body = useRef(null)
 
-
-  useEffect(() => {
-    ScrollTrigger.create({
-      trigger: aboutText.current,
-      start: "top 400px",
-      animation: gsap
-        .timeline()
-        .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
-        .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
-
-      toggleActions: "play none none none",
-    });
-    ScrollTrigger.refresh();
-
-  }, [aboutSection])
 
   useEffect(() => {
     ScrollTrigger.create({
@@ -32,13 +16,16 @@ export default function About() {
       start: "top 400px",
       animation: gsap
         .timeline()
-        .to(profile.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }),
+        .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
+        .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
+
 
       toggleActions: "play none none none",
     });
     ScrollTrigger.refresh();
 
   }, [aboutSection])
+
 
   return (
     <section ref={aboutSection}  aria-label="about me">
@@ -84,14 +71,14 @@ export default function About() {
           <img
             ref={profile}
             loading="lazy"
-            className="aspect-square translate-y-10 h-auto w-full rounded-md object-cover object-center sm:aspect-auto opacity-0"
+            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto"
             src={profileImg}
             width="600"
             height="800"
             alt="portrait image of Huy standing in front of a tree and foliage"
           />
         </div>
-        <div  ref={aboutText} className="top-20 sm:sticky md:top-28 lg:top-32">
+        <div className="top-20 sm:sticky md:top-28 lg:top-32">
           <div className="w-full space-y-4">
             <h3 ref={heading} className="text-heading-3 font-semibold leading-tight translate-y-10 opacity-0">
               A brief intro, who am I?
