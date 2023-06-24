@@ -29,10 +29,10 @@ export default function About() {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: aboutSection.current,
-      start: "-40px 100px",
+      start: "top 400px",
       animation: gsap
         .timeline()
-        .to(profile.current, { scale: 1, ease: "power4.out", duration: 2.5 }),
+        .to(profile.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }),
 
       toggleActions: "play none none none",
     });
@@ -84,7 +84,7 @@ export default function About() {
           <img
             ref={profile}
             loading="lazy"
-            className="aspect-square h-auto w-full rounded-md object-cover object-center sm:aspect-auto scale-150"
+            className="aspect-square translate-y-10 h-auto w-full rounded-md object-cover object-center sm:aspect-auto opacity-0"
             src={profileImg}
             width="600"
             height="800"
