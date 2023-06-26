@@ -90,7 +90,7 @@ export default function About() {
               make an impact, inspire and connect with people 😎.
               <br></br>
               <br></br>
-              When I am not developing or designing, I like to create videos
+              When I am not developing or designing, I enjoy creating videos
               that talk about frontend development, productivity and design
               on{" "}
               <a
