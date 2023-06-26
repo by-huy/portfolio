@@ -91,7 +91,7 @@ export default function About() {
               <br></br>
               <br></br>
               When I am not developing or designing, I like to create videos
-              that talk about frontend development, productivity and technology
+              that talk about frontend development, productivity and design
               on{" "}
               <a
                 className="underline hover:text-secondary-700 duration-300 ease-in-out"
