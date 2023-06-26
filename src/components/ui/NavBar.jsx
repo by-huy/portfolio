@@ -55,7 +55,7 @@ export default function NavBar({ sectionRefs }) {
       className="fixed top-0 z-50 flex w-full -translate-y-full items-center justify-between bg-secondary-100 px-5 py-3"
     >
       {/* logo */}
-      <a href="#hero" className="z-50">
+      <a href="#hero" aria-label="Logo" className="z-50">
         <svg
           ref={logo}
           width="80"
