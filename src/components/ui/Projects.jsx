@@ -2,6 +2,8 @@ export default function Projects({ name, img, alt, type, link, year, tools }) {
   return (
     <div>
       <a
+        target="_blank"
+        rel="noreferrer"
         href={link}
         className="img group inline-block overflow-hidden duration-200 ease-linear hover:rounded-3xl"
       >
