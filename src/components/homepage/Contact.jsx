@@ -165,6 +165,8 @@ export default function Contact() {
               <a
                 href="mailto:hello@huyng.xyz"
                 className="group relative w-fit cursor-pointer"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>hello@huyng.xyz</span>
                 <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
@@ -184,6 +186,8 @@ export default function Contact() {
               <a
                 href="https://bento.me/huyng"
                 className="group flex items-center space-x-2"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Icon icon="simple-icons:bento" color="#666" />
                 <div className="relative">
@@ -194,6 +198,8 @@ export default function Contact() {
               <a
                 href="https://github.com/cheesezzzz"
                 className="group flex items-center space-x-2"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Icon icon="mdi:github" color="#666" />
                 <div className="relative">
@@ -204,6 +210,8 @@ export default function Contact() {
               <a
                 href="https://www.linkedin.com/in/huyng03/"
                 className="group group flex w-fit items-center space-x-2"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Icon icon="mdi:linkedin" color="#666" />
                 <div className="relative">
@@ -214,6 +222,8 @@ export default function Contact() {
               <a
                 href="https://www.youtube.com/channel/UCBOAB9RV647G93GxLhEXleA"
                 className="group flex items-center space-x-2"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Icon icon="mdi:youtube" color="#666" />
                 <div className="relative">
