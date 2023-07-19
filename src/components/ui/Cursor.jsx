@@ -12,9 +12,9 @@ export default function Cursor() {
 
     const tl = gsap.timeline({ paused: true });
 
-    tl.to(curs.current, { scale: 10, ease: "expo.out" }).to(
+    tl.to(curs.current, { height: "112px", width:"112px", ease: "expo.inout" }).to(
       svg.current,
-      { opacity: 1 },
+      { opacity: 1, width: "96px", height:"96px" },
       0
     );
 
@@ -27,7 +27,7 @@ export default function Cursor() {
         tl.reverse();
         tl.eventCallback("onReverseComplete", function () {
           gsap.set(svg.current, { opacity: 0 }); // Hide the SVG element
-          gsap.set(curs.current, { scale: 1 }); // Hide the SVG element
+          gsap.set(curs.current, { height: "12px", width:"12px" }); // Hide the SVG element
         });
       });
     });

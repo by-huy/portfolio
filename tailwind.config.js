@@ -6,9 +6,9 @@ export default {
   ],
   theme: {
     fontSize: {
-      'title': ['clamp(3.75rem, 14vw, 8.75rem)'],
-      'heading-1': ['clamp(3.4rem, 8vw, 5.66rem)'],
-      'heading-2': ['clamp(2.4rem, 8vw, 5.66rem)'],
+      'title': ['clamp(3rem, 14vw, 9rem)'],
+      'heading-1': ['clamp(2.5rem, 6.5vw, 10rem)'],
+      'heading-2': ['clamp(2.4rem, 8vw, 10rem)'],
       'heading-3': ['clamp(2rem, 5vw, 2.75rem)'], //TODO
       'special': ['clamp(2rem, 4vw, 3.25rem)'],
       'works-title': ['clamp(1.25rem, 2vw, 1.5rem)'],

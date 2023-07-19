@@ -41,9 +41,9 @@ export default function Contact() {
     >
       
       <div   className="section-heading ">
-        <div className="heading flex translate-y-28 items-center justify-center space-x-3">
+        <div className="heading flex translate-y-72 items-center justify-center space-x-10">
           <svg
-            className="scale-90 sm:scale-125"
+            className="scale-90 sm:scale-125 xl:scale-[200%]"
             width="20"
             height="20"
             viewBox="0 0 32 16"
@@ -58,10 +58,10 @@ export default function Contact() {
             />
           </svg>
           <h2 className="w-fit text-center text-heading-2 font-medium uppercase text-secondary-600">
-            Contact me
+            Contact
           </h2>
           <svg
-            className="scale-90 sm:scale-125"
+            className="scale-90 sm:scale-125 xl:scale-[200%]"
             width="20"
             height="20"
             viewBox="0 0 32 16"

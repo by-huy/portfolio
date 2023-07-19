@@ -37,23 +37,23 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero relative flex w-full h-screen select-none items-center justify-center" aria-label="hero">
-      <div className="z-10 flex flex-col overflow-hidden w-full items-center text-title font-bold uppercase text-accent-300">
+      <div className="z-10 flex flex-col overflow-hidden w-full items-center text-title font-bold uppercase text-accent-300 space-y-10">
         <div className="title">
           {/* Learn more about useRef */}
-          <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-36">
+          <h1 ref={(el) => (titles.current[0] = el)} className="translate-y-96">
             Hey, I&apos;m Huy
           </h1>
         </div>
         <div className=" title">
           <h1
             ref={(el) => (titles.current[1] = el)}
-            className="title font-outline-3 md:font-outline-4 translate-y-36 text-transparent"
+            className="title font-outline-3 md:font-outline-4 translate-y-96 text-transparent"
           >
             Hey, I&apos;m Huy
           </h1>
         </div>
         <div className=" title">
-          <h1 ref={(el) => (titles.current[2] = el)} className="translate-y-36">
+          <h1 ref={(el) => (titles.current[2] = el)} className="translate-y-96">
             Hey, I&apos;m Huy
           </h1>
         </div>

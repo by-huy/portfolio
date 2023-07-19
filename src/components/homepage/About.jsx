@@ -18,7 +18,7 @@ export default function About() {
         .timeline()
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
         .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2),
-
+      
 
       toggleActions: "play none none none",
     });
@@ -30,9 +30,9 @@ export default function About() {
   return (
     <section ref={aboutSection}  aria-label="about me">
       <div className="section-heading select-none">
-        <div className="heading flex translate-y-28 items-center justify-center space-x-3">
+        <div className="heading flex translate-y-56 items-center justify-center space-x-10">
         <svg
-            className="scale-90 sm:scale-125"
+            className="scale-90 sm:scale-125 xl:scale-[200%]"
             width="20"
             height="20"
             viewBox="0 0 32 16"
@@ -50,7 +50,7 @@ export default function About() {
             about me
           </h2>
           <svg
-            className="scale-90 sm:scale-125"
+            className="scale-90 sm:scale-125 xl:scale-[200%]"
             width="20"
             height="20"
             viewBox="0 0 32 16"
@@ -84,10 +84,12 @@ export default function About() {
               A brief intro, who am I?
             </h3>
             <p ref={body} className="text-body-1 translate-y-10 opacity-0">
-              I am a self-taught creative frontend developer, web designer, and
-              UI/UX designer based in Melbourne, Australia. I am passionate in
-              catering my works for emerging start ups and small businesses that
-              make an impact, inspire and connect with people 😎.
+              I am a self-taught frontend developer, web designer, and
+              UI/UX designer based in Melbourne, Australia. 
+              <br></br>
+              <br></br>
+              
+              I specialize in crafting simple, intuitive and minimalistic designs for emerging start ups and small businesses that make an impact, inspire and connect with people 😎.
               <br></br>
               <br></br>
               When I am not developing or designing, I enjoy creating videos
