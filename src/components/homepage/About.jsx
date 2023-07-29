@@ -84,12 +84,12 @@ export default function About() {
               A brief intro, who am I?
             </h3>
             <p ref={body} className="text-body-1 translate-y-10 opacity-0">
-              I am a self-taught frontend developer, web designer, and
+              I am a self-taught frontend developer, and
               UI/UX designer based in Melbourne, Australia. 
               <br></br>
               <br></br>
               
-              I specialize in crafting simple, intuitive and minimalistic designs for emerging start ups and small businesses that make an impact, inspire and connect with people 😎.
+              I specialize in crafting elevated, intuitive, and minimalistic designs for startups and small businesses to help them stand out in the digital landscape with a powerful impact. 😎
               <br></br>
               <br></br>
               When I am not developing or designing, I enjoy creating videos
