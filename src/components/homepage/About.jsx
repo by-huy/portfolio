@@ -101,8 +101,6 @@ export default function About() {
               >
                 YouTube 📸
               </a>
-              . I also enjoy spending time distracting myself by playing the
-              guitar, reading some cool books or binge anime.
             </p>
           </div>
         </div>
