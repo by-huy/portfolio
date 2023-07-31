@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import ReactGA from 'react-ga';
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/ui/NavBar";
@@ -13,6 +14,10 @@ import Contact from "./components/homepage/Contact";
 import Footer from "./components/ui/Footer";
 
 const App = () => {
+  useEffect(() => {
+    ReactGA.initialize('YOUR_TRACKING_ID');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   gsap.registerPlugin(ScrollTrigger);
 
   const sectionRefs = useRef([]); // Creating a sectionRefs array
