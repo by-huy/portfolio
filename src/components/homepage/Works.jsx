@@ -11,7 +11,7 @@ export default function Works({ forwardedRef }) {
     <section
       ref={forwardedRef}
       id="works"
-      className="nav-change overflow-hidden"
+      className="nav-change overflow-hidden my-[10%]"
     >
      <Heading title="Projects" />
       <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">

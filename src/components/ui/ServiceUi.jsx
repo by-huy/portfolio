@@ -34,7 +34,7 @@ export default function ServiceUi({ title, description, items }) {
   return (
     <div ref={serviceUi} className=" mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-24">
       <div className="space-y-6">
-        <div className="space-y-3">
+        <div className="space-y-3 2xl:space-y-10">
           <h3 ref={heading} className="text-heading-3 2xl:text-7xl font-semibold leading-tight  translate-y-10 opacity-0">
             {title}
           </h3>

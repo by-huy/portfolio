@@ -37,7 +37,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="mt-20 overflow-hidden"
+      className="my-[10%] overflow-hidden"
       aria-label="contact me"
     >
       

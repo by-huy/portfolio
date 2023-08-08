@@ -22,7 +22,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="my-20" aria-label="services">
+    <section id="services" className="my-[10%]" aria-label="services">
       <Heading title="services" />
       <div className="space-y-14">
         <ServiceUi

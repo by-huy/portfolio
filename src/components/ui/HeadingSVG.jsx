@@ -2,7 +2,7 @@ export default function HeadingSVG() {
   return (
     <div>
       <svg
-        className="scale-90 sm:scale-125 xl:scale-[200%]"
+        className="hidden sm:block sm:scale-125 xl:scale-[200%]"
         width="20"
         height="20"
         viewBox="0 0 32 16"
