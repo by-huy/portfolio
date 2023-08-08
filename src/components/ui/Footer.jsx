@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="flex space-x-1" >
           <span>&copy;</span>
           <span>2023</span>
-          <span className="font-extrabold uppercase">Huy Nguyen</span>
+          <span className="font-extrabold uppercase 2xl:text-body-1">Huy Nguyen</span>
         </div>
         <div>
-          <span className=" text-body-4">Site designed and coded with ❤️‍🔥</span>
+          <span className=" text-body-4 2xl:text-body-1">Site designed and coded with ❤️‍🔥</span>
         </div>
       </div>
-      <button onClick={toTop} className="col-span-2 flex items-center space-x-2 w-fit group ">
+      <button onClick={toTop} className="col-span-2 flex items-center space-x-2 w-fit group 2xl:text-body-1">
         <span className="font-extrabold uppercase hover:font-black duration-200">BACK TO TOP</span>
         <span className="group-hover:-translate-y-3 duration-300 ease-in-out">
           <svg

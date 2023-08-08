@@ -4,6 +4,7 @@ import acc from "/src/assets/images/acc-square.webp";
 import daddy from "/src/assets/images/godaddy-desktop.webp";
 import sunnyside from "/src/assets/images/sunnyside-desktop.webp";
 import Projects from "../ui/Projects";
+import Heading from "../ui/Heading";
 
 export default function Works({ forwardedRef }) {
   return (
@@ -12,43 +13,7 @@ export default function Works({ forwardedRef }) {
       id="works"
       className="nav-change overflow-hidden"
     >
-      <div className="section-heading">
-        <div className="heading flex translate-y-96 items-center justify-center space-x-10">
-          <svg
-            className=" scale-90 sm:scale-125 xl:scale-[200%]"
-            width="20"
-            height="20"
-            viewBox="0 0 32 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M1.39876e-06 -2.79753e-06C6.26248e-07 8.83656 7.16352 16 16 16C24.8366 16 32 8.83656 32 0L1.39876e-06 -2.79753e-06Z"
-              fill="#D1D1C7"
-            />
-          </svg>
-          <h2 className="w-fit text-center text-heading-2 font-medium uppercase text-secondary-400">
-             Projects
-          </h2>
-          <svg
-            className="scale-90 sm:scale-125 xl:scale-[200%]"
-            width="20"
-            height="20"
-            viewBox="0 0 32 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M1.39876e-06 -2.79753e-06C6.26248e-07 8.83656 7.16352 16 16 16C24.8366 16 32 8.83656 32 0L1.39876e-06 -2.79753e-06Z"
-              fill="#D1D1C7"
-            />
-          </svg>
-        </div>
-      </div>
+     <Heading title="Projects" />
       <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
         {/* Project #1 */}
         <div className=" col-span-1 md:col-span-12">

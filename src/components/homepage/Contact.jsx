@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { useEffect, useState, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
+import Heading from "../ui/Heading";
 
 export default function Contact() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
@@ -40,49 +41,14 @@ export default function Contact() {
       aria-label="contact me"
     >
       
-      <div   className="section-heading ">
-        <div className="heading flex translate-y-72 items-center justify-center space-x-10">
-          <svg
-            className="scale-90 sm:scale-125 xl:scale-[200%]"
-            width="20"
-            height="20"
-            viewBox="0 0 32 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M1.39876e-06 -2.79753e-06C6.26248e-07 8.83656 7.16352 16 16 16C24.8366 16 32 8.83656 32 0L1.39876e-06 -2.79753e-06Z"
-              fill="#8C8C73"
-            />
-          </svg>
-          <h2 className="w-fit text-center text-heading-2 font-medium uppercase text-secondary-600">
-            Contact
-          </h2>
-          <svg
-            className="scale-90 sm:scale-125 xl:scale-[200%]"
-            width="20"
-            height="20"
-            viewBox="0 0 32 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M1.39876e-06 -2.79753e-06C6.26248e-07 8.83656 7.16352 16 16 16C24.8366 16 32 8.83656 32 0L1.39876e-06 -2.79753e-06Z"
-              fill="#8C8C73"
-            />
-          </svg>
-        </div>
-      </div>
+      
+      <Heading title="Contact" />
       <div ref={contactSection} className="mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12">
         <div className="col-span-4">
-          <h3 ref={heading} className="max-w-lg text-heading-3 font-semibold leading-tight translate-y-10 opacity-0">
+          <h3 ref={heading} className="max-w-lg 2xl:max-w-3xl text-heading-3 2xl:text-7xl font-semibold leading-tight translate-y-10 opacity-0">
             Have an awesome idea? Let&apos;s bring it to life.
           </h3>
-          <p ref={body} className="mt-4 max-w-md text-body-2 text-accent-100 translate-y-10 opacity-0">
+          <p ref={body} className="mt-4 max-w-md 2xl:max-w-2xl text-body-2 2xl:text-4xl text-accent-100 translate-y-10 opacity-0">
             I am looking for freelance opportunities or internships in startups,
             agencies, and design studios.
           </p>
@@ -107,7 +73,7 @@ export default function Contact() {
                   />
                 <label
                   htmlFor="name"
-                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
                 >
                   Your name
                 </label>
@@ -123,7 +89,7 @@ export default function Contact() {
                 />
                 <label
                   htmlFor="email"
-                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
                 >
                   Your email
                 </label>
@@ -139,7 +105,7 @@ export default function Contact() {
                 ></textarea>
                 <label
                   htmlFor="message"
-                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
+                  className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-body-3 2xl:text-body-2 text-secondary-600 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75"
                 >
                   Your message
                 </label>
@@ -160,8 +126,8 @@ export default function Contact() {
         </div>
         <div className="col-span-2 grid grid-cols-1 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1">
           <div className="space-y-3 ">
-            <h4 className="text-body-1 font-semibold">Contact Details</h4>
-            <div className="flex flex-col space-y-3 text-body-2">
+            <h4 className="text-body-1 2xl:text-4xl font-semibold">Contact Details</h4>
+            <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
               <a
                 href="mailto:hello@huyng.xyz"
                 className="group relative w-fit cursor-pointer"
@@ -181,8 +147,8 @@ export default function Contact() {
             </div>
           </div>
           <div className="space-y-3 ">
-            <h4 className="text-body-1 font-semibold">My Digital Spaces</h4>
-            <div className="space-y-3 text-body-2">
+            <h4 className="text-body-1 2xl:text-4xl font-semibold">My Digital Spaces</h4>
+            <div className="space-y-3 text-body-2 2xl:text-3xl">
               <a
                 href="https://bento.me/huyng"
                 className="group flex items-center space-x-2"
@@ -234,8 +200,8 @@ export default function Contact() {
             </div>
           </div>
           <div className="space-y-3 ">
-            <h4 className="text-body-1 font-semibold">Location</h4>
-            <div className="space-y-2 text-body-2">
+            <h4 className="text-body-1 font-semibold 2xl:text-4xl">Location</h4>
+            <div className="space-y-2 text-body-2 2xl:text-3xl">
               <p>
                 Melbourne, Australia <br></br>
                 {time}
