@@ -137,13 +137,7 @@ export default function Contact() {
                 <span>hello@huyng.xyz</span>
                 <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
               </a>
-              <a
-                href="tel:+61 435 107 203"
-                className="group relative w-fit cursor-pointer"
-              >
-                <span>+61 435 107 203</span>
-                <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
-              </a>
+             
             </div>
           </div>
           <div className="space-y-3 ">
